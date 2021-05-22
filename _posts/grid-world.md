@@ -6,6 +6,7 @@ tags:
   - Tabular RL
   - Value Iteration
 ---
+
 Consider the classic problem of finding the shortest path between two cells on a grid filled with obstacles.
 
 ![Grid](https://adi3e08.github.io/files/blog/grid-world/imgs/grid.png)
@@ -28,8 +29,11 @@ Consider the classic problem of finding the shortest path between two cells on a
 We consider two variations of value iteration
 
 ![value_iteration_sync](https://adi3e08.github.io/files/blog/grid-world/imgs/value_iteration_sync.png)
+
 ![value_iteration_async](https://adi3e08.github.io/files/blog/grid-world/imgs/value_iteration_async.png)
 
 *Result*
+
 ![result](https://adi3e08.github.io/files/blog/grid-world/imgs/result.png)
+
 ![best_path](https://adi3e08.github.io/files/blog/grid-world/imgs/best_path.png)

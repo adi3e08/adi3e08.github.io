@@ -1,7 +1,7 @@
 ---
 title: 'Grid World'
 date: 2017-04-14
-permalink: /posts/2017/04/blog-post-1/
+permalink: /posts/2017/04/grid-world/
 tags:
   - Tabular RL
   - Value Iteration

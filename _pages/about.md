@@ -11,5 +11,5 @@ I am interested in deep learning and reinforcement learning (RL), especially the
 
 Background
 ======
-I graduated with a Dual Degree (B.Tech and M.Tech) in [Engineering Design](https://ed.iitm.ac.in){:target="_blank"} from [IIT Madras](https://www.iitm.ac.in/){:target="_blank"} in 2016. My minor was in Systems Engineering. For my master's thesis, I worked on Quantum Chaos with [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"}, co-guided by [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
-Between 2018 and 2021, I worked as a R&D Engineer at Honeywell. More details in my [CV](https://adi3e08.github.io/files/cv.pdf){:target="_blank"}.
+I graduated with a Dual Degree (B.Tech and M.Tech) in [Engineering Design](https://ed.iitm.ac.in){:target="_blank"} from [IIT Madras](https://www.iitm.ac.in/){:target="_blank"} in 2016. My minor was in Systems Engineering. For my master's thesis, I worked on Quantum Chaos under the guidance of [Dr. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Dr. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
+Between 2018 and 2021, I worked as a R&D Engineer at Honeywell, Bengaluru. More details in my [CV](https://adi3e08.github.io/files/cv.pdf){:target="_blank"}.

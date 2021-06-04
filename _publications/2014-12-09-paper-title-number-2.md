@@ -1,10 +1,10 @@
 ---
 title: "Chaotic Dynamics in Robotic Manipulation"
 permalink: /publication/2014-12-09-paper-title-number-2
-excerpt: 'Project carried out as part of a Robotic Manipulation course at IIT Madras.'
+excerpt: 'Project carried out as part of Robotic Manipulation course at IIT Madras.'
 date : 2014-12-09
 ---
-This work represents a project carried out by me as part of a Robotic Manipulation course taught by [Dr. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"} at IIT Madras.
+This work represents a project carried out by me as part of a Robotic Manipulation course at IIT Madras.
 
 We studied chaotic dynamics in robotic manipulation that can occur for certain values of controller gains and model mismatch.
 

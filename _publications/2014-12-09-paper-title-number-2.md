@@ -1,0 +1,18 @@
+---
+title: "Chaotic Dynamics in Robotic Manipulation"
+collection: publications
+permalink: /publication/2014-12-09-paper-title-number-2
+excerpt: 'Studied chaotic dynamics in robotic manipulation that can occur for certain values of controller gains and model mismatch.'
+date: 2014-12-09
+venue: 'IIT Madras'
+paperurl: 'http://adi3e08.github.io/files/Project Report_Adithya_R_ED11B002.pdf'
+---
+This work represents a project carried out by me as part of a Robotic Manipulation course at IIT Madras.
+
+I studied chaotic dynamics in robotic manipulation that can occur for certain values of controller gains and model mismatch.
+
+I simulated a parallel manipulator - a planar 5-bar, to track a periodic trajectory. I calculated Lyapunov exponents and plotted phase space plots to identify chaotic dynamics.
+
+[Download the project report here](http://adi3e08.github.io/files/Project Report_Adithya_R_ED11B002.pdf)
+
+Note : The typesetting of mathematical expressions and equations in the above report is somewhat poor. When I wrote this report I did not know about Latex ! 

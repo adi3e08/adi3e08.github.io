@@ -1,6 +1,7 @@
 ---
 title: "Mixed State Entanglement In Quantized Chaotic Systems"
 permalink: /publication/2016-06-03-paper-title-number-1
+date : 2016-06-03
 ---
 This work represents my Master's thesis carried while at IIT Madras.
 

@@ -13,4 +13,4 @@ We simulated a parallel manipulator - a planar 5-bar, to track a periodic trajec
 
 [Download the project report here](http://adi3e08.github.io/files/Project Report_Adithya_R_ED11B002.pdf)
 
-Note : The typesetting of mathematical expressions and equations in the above report is somewhat poor. When I wrote this report I was unaware of Latex ! 
+Note : The typesetting of mathematical expressions and equations in the above report is not great. When I wrote this report I was unaware of Latex ! 

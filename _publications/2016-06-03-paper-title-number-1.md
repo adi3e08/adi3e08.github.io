@@ -5,7 +5,7 @@ date : 2016-06-03
 ---
 This work represents my Master's thesis carried while at IIT Madras.
 
-My advisors were [Dr. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"}, Department of Physics, IIT Madras, [Dr. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}, Department of Engineering Design, IIT Madras.
+My advisors were [Dr. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"}, Department of Physics, IIT Madras and [Dr. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}, Department of Engineering Design, IIT Madras.
 
 We studied the entanglement of the quantum coupled standard map under time evolution for initial states that are mixed, for different interaction strengths between the standard maps and different dimensions of the surrounding environment. 
 

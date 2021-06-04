@@ -5,7 +5,7 @@ permalink: /publication/2014-12-09-paper-title-number-2
 excerpt: 'Studied chaotic dynamics in robotic manipulation that can occur for certain values of controller gains and model mismatch.'
 date: 2014-12-09
 venue: 'IIT Madras'
-paperurl: 'http://adi3e08.github.io/files/Project Report_Adithya_R_ED11B002.pdf'
+paperurl: 'http://adi3e08.github.io/files/Project_Report_1.pdf'
 ---
 This work represents a project carried out by me as part of a Robotic Manipulation course at IIT Madras.
 

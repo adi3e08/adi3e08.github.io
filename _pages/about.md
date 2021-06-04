@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I am interested in deep learning and reinforcement learning (RL), especially their application to robotics. In the past I have applied deep RL to problems such as Autonomous Navigation for UAVs and Multi Agent Co-operation. I have a strong multidisciplinary engineering background.
+I am interested in deep learning and reinforcement learning (RL), especially their application to robotics. In the past, I have applied deep RL to problems such as autonomous navigation for UAVs and multi-agent co-operation. I have a strong multidisciplinary engineering background.
 
 Background
 ======

@@ -1,7 +1,7 @@
 ---
 title: "Chaotic Dynamics in Robotic Manipulation"
 permalink: /publication/2014-12-09-paper-title-number-2
-excerpt: 'Studied chaotic dynamics in robotic manipulation that can occur for certain values of controller gains and model mismatch.'
+excerpt: 'Project carried out as part of a Robotic Manipulation course at IIT Madras.'
 date: 2014-12-09
 paperurl: 'http://adi3e08.github.io/files/Project_Report_1.pdf'
 ---

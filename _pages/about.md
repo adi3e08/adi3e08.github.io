@@ -12,6 +12,6 @@ I received my Dual Degree (B.Tech and M.Tech) in [Engineering Design](https://ed
 
 I am interested in deep learning and reinforcement learning (RL), in particular, their application to autonomous systems and robotics. In the past, I have applied deep RL to problems such as multi-agent co-operation and autonomous navigation. I have a strong multidisciplinary engineering background. Other areas I have worked on in the past include, supervised learning (point cloud segmentation, speaker recognition, image classification/segmentation), quantum chaos, state estimation and control for UAVs and robotic manipulation.
 
-I am a hobby physicist. I also enjoy football, running, among other things.   
+I am a hobby physicist. I also enjoy playing football and running, among other things.   
 
 You can find my detailed CV [here](https://adi3e08.github.io/files/cv.pdf){:target="_blank"}.

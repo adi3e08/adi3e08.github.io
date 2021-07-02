@@ -7,9 +7,9 @@ This work represents my master's thesis carried out at IIT Madras.
 
 My advisors were [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
 
-We studied the entanglement of the quantum coupled standard map under time evolution for initial states that are mixed, for different interaction strengths between the standard maps and different dimensions of the surrounding environment. 
+Most previous work on entanglement in quantized chaotic systems had dealt only with pure states. However, in reality, even a carefully prepared and isolated system tends to interact with it’s environment, which has the effect of leaving the system in a mixed state. Thus, the study of mixed state entanglement in quantized chaotic systems forms an important and unexplored problem. It could have an important role to play in how quantum chaos may affect quantum computing. 
 
-Most previous work on entanglement in quantized chaotic systems had dealt only with pure states. However, in reality, even a carefully prepared and isolated system tends to interact with it’s environment, which has the effect of leaving the system in a mixed state. Thus the study of mixed state entanglement in quantized chaotic systems forms an important and unexplored problem. It could have an important role to play in how quantum chaos affects quantum computing.
+We studied the entanglement of the quantum coupled standard map under time evolution for initial states that are mixed, for different interaction strengths between the standard maps and different dimensions of the surrounding environment. 
 
 We found that for a given interaction strength, as we increase the environment dimension, the tendency to get entangled reduces and there exists a critical environment dimension, in most cases beyond which the state remains separable at all times. Such a phenomenon is potentially a problem in situations where entanglement is desirable.
 

@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<p align="left">
+<p align="center">
 <img src="https://adi3e08.github.io/images/profile_picture.jpg" width="15%" height="15%"/>
 </p>
 I received my Dual Degree (B.Tech and M.Tech) in [Engineering Design](https://ed.iitm.ac.in){:target="_blank"} from [IIT Madras](https://www.iitm.ac.in/){:target="_blank"} in 2016. Since then, I have spent a few years working in the industry. Most recently, between 2018 and 2021, I worked as a Research Engineer at [Honeywell Aerospace](https://aerospace.honeywell.com){:target="_blank"}, Bengaluru, India.

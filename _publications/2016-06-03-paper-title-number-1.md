@@ -13,4 +13,4 @@ Most previous work on entanglement in quantized chaotic systems had dealt only w
 
 We found that for a given interaction strength, as we increase the environment dimension, the tendency to get entangled reduces and there exists a critical environment dimension, in most cases beyond which the state remains separable at all times. Such a phenomenon is potentially a problem in situations where entanglement is desirable.
 
-[Download my thesis here](https://drive.google.com/file/d/1Shu4J47R_wIqWh6opb5N7-mZth3mWA3c/view).
+[View my thesis here](https://drive.google.com/file/d/1Shu4J47R_wIqWh6opb5N7-mZth3mWA3c/view).

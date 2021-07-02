@@ -10,6 +10,6 @@ Studied chaotic dynamics in robotic manipulation that can occur for certain valu
 
 Simulated a parallel manipulator - a planar 5-bar, to track a periodic trajectory. Calculated Lyapunov exponents and plotted phase space plots to identify chaotic dynamics.
 
-[Download the project report here](http://adi3e08.github.io/files/Project_Report_1.pdf)
+[View the project report here](http://adi3e08.github.io/files/Project_Report_1.pdf).
 
-Note : The typesetting of mathematical expressions and equations in the above report is not great. When I wrote this report I was unaware of Latex ! 
+#### Note : The typesetting of mathematical expressions in the above report is not great. I was unaware of Latex at the time ! 

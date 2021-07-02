@@ -12,4 +12,4 @@ Simulated a parallel manipulator - a planar 5-bar, to track a periodic trajector
 
 [View the project report here](http://adi3e08.github.io/files/Project_Report_1.pdf).
 
-Note : The general typesetting of the report, especially mathematical expressions could have been better. I was unaware of Latex at the time ! 
+I realize that the typesetting in the above report, especially mathematical expressions and images could have been better. I was unaware of Latex at the time ! 

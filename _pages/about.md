@@ -20,6 +20,6 @@ I am interested in deep reinforcement learning (deep RL), in particular, it’s 
 
 I have a strong multidisciplinary engineering background. Other areas I have worked on in the past include, supervised learning (point cloud segmentation, speaker recognition, image classification/segmentation), state estimation and control for UAVs and robotic manipulation.
 
-I am also passionate about physics. For my master's thesis at IIT Madras, I worked on quantum chaos under the guidance of [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}. 
+Also, I am passionate about physics. For my master's thesis at IIT Madras, I worked on quantum chaos under the guidance of [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}. 
 
 You can find my detailed CV [here](https://adi3e08.github.io/files/cv.pdf){:target="_blank"}.

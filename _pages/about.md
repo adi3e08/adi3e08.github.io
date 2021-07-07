@@ -14,9 +14,9 @@ Welcome to my homepage !
 
 **About me**
 
-I received my Dual Degree (B.Tech and M.Tech) in [Engineering Design](https://ed.iitm.ac.in){:target="_blank"} from [IIT Madras](https://www.iitm.ac.in/){:target="_blank"} in 2016. Most recently, between 2018 and 2021, I worked as a Research Engineer at [Honeywell Aerospace](https://aerospace.honeywell.com){:target="_blank"}, Bengaluru, India.
+I received my Dual Degree (B.Tech and M.Tech) in [Engineering Design](https://ed.iitm.ac.in){:target="_blank"} from [IIT Madras](https://www.iitm.ac.in/){:target="_blank"}, India in 2016. Most recently, between 2018 and 2021, I worked as a Research Engineer at [Honeywell](https://www.honeywell.com){:target="_blank"}, Bengaluru, India.
 
-I am interested in deep reinforcement learning (deep RL), in particular, it’s application to autonomous systems and robotics. In the past, I have applied deep RL to problems such as multi-agent co-operation and autonomous navigation for UAVs.
+I am interested in deep reinforcement learning (deep RL), in particular, it’s application to embodied AI, autonomous systems and robotics. In the past, I have applied deep RL to problems such as multi-agent co-operation and autonomous navigation for UAVs.
 
 I have a strong multidisciplinary engineering background. Other areas I have worked on in the past include, supervised learning (point cloud segmentation, speaker recognition, image classification/segmentation), state estimation and control for UAVs and robotic manipulation.
 

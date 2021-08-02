@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 <p>
-<img src="https://adi3e08.github.io/images/profile_picture.jpg" width="20%" height="20%"/>
+<img src="https://adi3e08.github.io/images/profile_picture.jpg" width="17.5%" height="17.5%"/>
 </p>
 Welcome to my homepage !
 

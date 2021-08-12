@@ -16,4 +16,4 @@ I received my Dual Degree (B.Tech, M.Tech) in [Engineering Design](https://ed.ii
 
 I am interested in deep reinforcement learning, in particular, it’s application to robotics. I have applied deep reinforcement learning to problems such as multi-agent co-operation and autonomous navigation for UAVs.
 
-I have a strong multidisciplinary engineering background. In the past, I have also worked on problems in computer vision, speech recognition, robotics and dynamical systems. You can view my detailed CV [here](https://adi3e08.github.io/files/cv.pdf){:target="_blank"}.
+I have a strong multidisciplinary engineering background. In the past, I have also worked on problems in computer vision, speech recognition and dynamical systems. You can view my detailed CV [here](https://adi3e08.github.io/files/cv.pdf){:target="_blank"}.

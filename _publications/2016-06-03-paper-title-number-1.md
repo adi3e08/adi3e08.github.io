@@ -3,7 +3,7 @@ title: "Mixed State Entanglement In Quantized Chaotic Systems"
 permalink: /publication/2016-06-03-paper-title-number-1
 date : 2016-06-03
 ---
-This work represents my master's thesis carried out at IIT Madras. I pursued this project out of passion for physics.
+This work represents my master's thesis carried out at IIT Madras.
 
 I was guided by [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
 

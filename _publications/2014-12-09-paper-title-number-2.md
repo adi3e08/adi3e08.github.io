@@ -8,7 +8,7 @@ This work represents a project carried out by me as part of a Robotic Manipulati
 
 Studied chaotic dynamics in robotic manipulation that can occur for certain values of controller gains and model mismatch.
 
-Simulated a parallel manipulator - a planar 5-bar, to track a periodic trajectory. Calculated Lyapunov exponents and plotted phase space plots to identify chaotic dynamics.
+Numerically simulated a parallel manipulator - a planar 5-bar, to track a periodic trajectory. Calculated Lyapunov exponents and plotted phase space plots to identify chaotic dynamics.
 
 [View the project report here](http://adi3e08.github.io/files/Project_Report_1.pdf){:target="_blank"}.
 

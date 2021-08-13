@@ -5,7 +5,7 @@ date : 2016-06-03
 ---
 This work represents my master's thesis carried out at IIT Madras.
 
-My advisors were [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
+I was guided by [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
 
 Most previous work on entanglement in quantized chaotic systems had dealt only with pure states. However, in reality, even a carefully prepared and isolated system tends to interact with it’s environment, which has the effect of leaving the system in a mixed state. Thus, the study of mixed state entanglement in quantized chaotic systems forms an important and unexplored problem. It could have an important role to play in how quantum chaos may affect quantum computing. 
 

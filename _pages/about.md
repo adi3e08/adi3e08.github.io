@@ -16,4 +16,6 @@ I received my Dual Degree (B.Tech, M.Tech) in [Engineering Design](https://ed.ii
 
 I am interested in deep reinforcement learning, in particular, it’s application to robotics. In the past, I have applied deep reinforcement learning to problems such as multi-agent co-operation and autonomous navigation.
 
+For my master's thesis at IIT Madras, I worked in the area of dynamical systems under the guidance of  [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
+
 You can view my detailed CV [here](https://adi3e08.github.io/files/cv.pdf){:target="_blank"}.

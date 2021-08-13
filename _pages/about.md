@@ -14,7 +14,7 @@ Welcome to my homepage !
 
 I received my Dual Degree (B.Tech, M.Tech) in [Engineering Design](https://ed.iitm.ac.in){:target="_blank"} from [IIT Madras](https://www.iitm.ac.in/){:target="_blank"}, India in 2016. Most recently, between June 2018 and March 2021, I spent three years as a Research Engineer at [Honeywell](https://www.honeywell.com){:target="_blank"}, Bengaluru, India.
 
-I am interested in deep reinforcement learning, in particular, it’s application to robotics. In the past, I have applied it to problems such as multi-agent co-operation and autonomous navigation.
+I am interested in deep reinforcement learning, in particular, it’s application to robotics. In the past, I have applied deep reinforcement learning to problems such as multi-agent co-operation and autonomous navigation.
 
 I am also passionate about physics. For my master's thesis at IIT Madras, I worked in the area of quantum chaos under the guidance of  [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
 

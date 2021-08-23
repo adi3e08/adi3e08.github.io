@@ -16,7 +16,7 @@ I received my Dual Degree (B.Tech, M.Tech) in [Engineering Design](https://ed.ii
 
 I am interested in deep reinforcement learning, in particular, it’s application to robotics. I have applied deep reinforcement learning to problems such as multi-agent co-operation and autonomous navigation for UAVs.
 
-In the past, I have worked on quadrotor flight control, numerical simulation of robotic manipulators and deep learning applied to computer vision, speech recognition.
+In the past, I have also worked on quadrotor flight control, numerical simulation of robotic manipulators and applied deep learning to computer vision, speech recognition.
 
 For my master's thesis at IIT Madras, I worked in the area of quantum physics under the guidance of  [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
 

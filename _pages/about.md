@@ -12,9 +12,9 @@ redirect_from:
 </p>
 Welcome to my homepage !
 
-I received my Dual Degree (B.Tech, M.Tech) in [Engineering Design](https://ed.iitm.ac.in){:target="_blank"} from [IIT Madras](https://www.iitm.ac.in/){:target="_blank"}, India in 2016. Most recently, between June 2018 and March 2021, I spent three years as a Research Engineer at [Honeywell](https://www.honeywell.com){:target="_blank"}, Bengaluru, India.
+I am currently a Research Fellow at [RBCDSAI, IIT Madras](https://rbcdsai.iitm.ac.in/){:target="_blank"} working on deep reinforcement learning under the guidance of [Prof. Balaraman Ravindran](https://www.cse.iitm.ac.in/~ravi/){:target="_blank"}. Earlier, between June 2018 and March 2021, I spent three years as a Research Engineer at [Honeywell](https://www.honeywell.com){:target="_blank"}, Bengaluru, India. I received my Dual Degree (B.Tech, M.Tech) in [Engineering Design](https://ed.iitm.ac.in){:target="_blank"} from [IIT Madras](https://www.iitm.ac.in/){:target="_blank"}, India in 2016.
 
-I am interested in deep reinforcement learning, in particular, it’s application to robotics. I have applied deep reinforcement learning to problems such as multi-agent co-operation and autonomous navigation for UAVs.
+I am mainly interested in deep reinforcement learning, in particular, it’s application to robotics. I have applied deep reinforcement learning to problems such as multi-agent co-operation and autonomous navigation for UAVs.
 
 In the past, I have worked on other areas of engineering and science. I have applied deep learning to problems in computer vision, speech recognition. I have worked on flight control for quadrotors, numerical simulation of robotic manipulators. For my master's thesis at IIT Madras, I worked in the area of quantum physics under the guidance of  [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
 

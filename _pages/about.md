@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 <p style="margin-top:-5%">
-<img src="https://adi3e08.github.io/images/adithya_image.jpg" width="18.5%" height="18.5%"/>
+<img src="https://adi3e08.github.io/images/adithya_image_zoom.jpg" width="25%" height="35%"/>
 </p>
 Welcome to my homepage !
 

@@ -16,6 +16,6 @@ I am currently a Research Fellow at the Robert Bosch Centre for Data Science and
 
 I am mainly interested in deep reinforcement learning, in particular, it’s application to robotics. Currently, my work is focused on improving model-based reinforcement learning for robotics, through better inductive biases based on the underlying physics. Earlier, I have applied model-free reinforcement learning to problems such as multi-agent co-operation and autonomous navigation for UAVs.
 
-In the past, I have worked on other areas of engineering and science. I have applied deep learning to problems in computer vision and speech recognition. I have worked on flight control for quadrotors and studied the dynamics of robotic manipulators. For my dual degree project at IIT Madras, I worked in the area of quantum chaos under the guidance of [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
+In the past, I have worked on other areas of engineering and science. I have applied deep learning to problems in computer vision and speech recognition. I have worked on flight control for quadrotors and studied the dynamics of robotic manipulators. For my dual degree project at IIT Madras, I worked in the area of quantum chaos under the guidance of <br> [Prof. Arul Lakshminarayan](https://physics.iitm.ac.in/~arul/index.html){:target="_blank"} and [Prof. Sandipan Bandyopadhyay](https://ed.iitm.ac.in/~sandipan/){:target="_blank"}.
 
-* CV upon request.
+\* CV upon request.

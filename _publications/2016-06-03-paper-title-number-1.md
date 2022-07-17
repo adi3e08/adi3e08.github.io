@@ -1,6 +1,6 @@
 ---
 title: "Mixed State Entanglement In Quantized Chaotic Systems"
-permalink: /publication/dual-degree-project
+permalink: /publications/dual-degree-project
 date : 2016-06-03
 ---
 This work represents my master's thesis carried out at IIT Madras, under the guidance of [Prof. Arul Lakshminarayan](https://sites.google.com/view/arulakshminarayan){:target="_blank"}.

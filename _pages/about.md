@@ -9,7 +9,7 @@ redirect_from:
 ---
 <p style="margin-top:-5%">
 <!-- <img src="https://adi3e08.github.io/images/profile_picture.jpg" width="16%" height="24%" style="float:right"/> -->
-<img src="https://adi3e08.github.io/images/adithya_image_zoom.jpg" width="25%" height="37.5%" style="float:right;padding: 0px 0px 3px 3px"/>
+<img src="https://adi3e08.github.io/images/adithya_image_zoom.jpg" width="25%" height="37.5%" style="float:right;padding: 0px 0px 0px 10px"/>
 </p>
 Welcome to my homepage!
 

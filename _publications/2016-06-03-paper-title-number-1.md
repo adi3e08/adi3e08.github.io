@@ -3,9 +3,7 @@ title: "Mixed State Entanglement In Quantized Chaotic Systems"
 permalink: /publications/dual-degree-project
 date : 2016-06-03
 ---
-This work represents my master's thesis carried out at IIT Madras. I worked with [Prof. Arul Lakshminarayan](https://sites.google.com/view/arulakshminarayan){:target="_blank"}.
-
-You can view my complete thesis [here](https://drive.google.com/file/d/1Shu4J47R_wIqWh6opb5N7-mZth3mWA3c/view){:target="_blank"}.
+This work represents my master's thesis carried out at IIT Madras. I worked with [Prof. Arul Lakshminarayan](https://sites.google.com/view/arulakshminarayan){:target="_blank"}. You can view my complete thesis [here](https://drive.google.com/file/d/1Shu4J47R_wIqWh6opb5N7-mZth3mWA3c/view){:target="_blank"}.
 
 # Summary
 Many physical systems in nature, for example, all atoms and molecules except the hydrogen atom (and related two-body atomic systems) exhibit chaos when treated classically [[1]](#1) [[2]](#2). The quantization of classically chaotic systems is one of the most frequently studied forms of quantum chaos [[3]](#3). This means that the same atoms and molecules, when treated quantum mechanically would exhibit quantum chaos. Decoherence, which explains wavefunction collapse as the quantum nature of a system "leaks" into it's environment, is strongly influenced by chaos in the system/environment [[4]](#4). Also, quantum chaos is known to have an important place in the foundation of quantum statistical mechanics [[5]](#5). Thus, the study of quantum chaos becomes important from a general quantum mechanical perspective.  

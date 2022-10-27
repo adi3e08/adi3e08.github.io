@@ -2,9 +2,10 @@
 title: "Lagrangian Model Based Reinforcement Learning"
 permalink: /publications/mbrl-lnn
 date : 2022-10-27
-venue: 'Deep Reinforcement Learning Workshop, NeurIPS 2022'
+venue: 'Deep Reinforcement Learning Workshop, NeurIPS'
 excerpt: 'We utilize the structure of rigid body dynamics to learn a Lagrangian Neural Network and use it to train a model-based RL algorithm.'
 ---
+<!-- This is joint work with [Prof. Balaraman Ravindran](https://www.cse.iitm.ac.in/~ravi/){:target="_blank"}. -->
 # Abstract
 
 We apply reinforcement learning (RL) to robotic systems undergoing rigid body motion. One of the drawbacks of traditional RL algorithms has been their poor 

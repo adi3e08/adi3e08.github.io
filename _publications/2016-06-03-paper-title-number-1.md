@@ -1,11 +1,9 @@
 ---
 title: "Mixed State Entanglement In Quantized Chaotic Systems"
 permalink: /publications/dual-degree-project
-date : 2016-06-03
 excerpt : 'This work represents my masters thesis carried out at IIT Madras. We study the connections between chaos and quantum entanglement. In particular, we study mixed state entanglement in quantized chaotic systems, which forms an important and unexplored problem, with possible implications for quantum computing.'
 ---
-<!-- excerpt : 'This work represents my master's thesis carried out at IIT Madras. We study the connections between chaos and quantum entanglement. In particular, we study mixed state entanglement in quantized chaotic systems, which forms an important and unexplored problem, with possible implications for quantum computing.' -->
-
+<!-- date : 2016-06-03 -->
 This work represents my master's thesis carried out at IIT Madras. I worked with [Prof. Arul Lakshminarayan](https://sites.google.com/view/arulakshminarayan){:target="_blank"}.
 
 You can view my complete thesis [here](https://drive.google.com/file/d/1Shu4J47R_wIqWh6opb5N7-mZth3mWA3c/view){:target="_blank"}.

@@ -11,6 +11,6 @@ author_profile: False
 
 {% include base_path %}
 
-{% for post in site.research reversed %}
+{% for post in site.portfolio reversed %}
   {% include archive-single.html %}
 {% endfor %}

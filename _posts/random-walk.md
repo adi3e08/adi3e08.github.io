@@ -1,12 +1,13 @@
 ---
 title: 'Random Walk'
 date: 2017-05-14
-permalink: /posts/2017/05/random-walk/
+permalink: /blog/random-walk/
 tags:
   - Tabular RL
   - Policy Evaluation
   - Model Based RL
   - Model Free RL
+author_profile : False
 ---
 Consider the classic random walk problem. Let $N$ states laid out in a row, with the left most state being a terminal state. Consider an agent who, when at a non-terminal state, chooses to move with probability $p$ to the left neighbour and with probability $1-p$ to the right neighbour (or to itself in case of the right-most state). All rewards are 1. Our objective is to estimate the expected return from each state, under the agent's policy.
 

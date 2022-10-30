@@ -3,7 +3,7 @@ title: "Lagrangian Model Based Reinforcement Learning"
 permalink: /research/mbrl-lnn
 venue: 'Deep Reinforcement Learning Workshop, NeurIPS'
 date: 2022-10-27
-excerpt: 'This work was accepted at the Deep Reinforcement Learning Workshop, NeurIPS 2022. We apply model-based RL to robotic systems undergoing rigid body motion. We utilize the structure of rigid body dynamics to learn a Lagrangian Neural Network and use it to train our model-based RL algorithm.'
+excerpt: 'We apply model-based RL to robotic systems undergoing rigid body motion. We utilize the structure of rigid body dynamics to learn a Lagrangian Neural Network and use it to train our model-based RL algorithm. This work was accepted at the Deep Reinforcement Learning Workshop, NeurIPS 2022.'
 author_profile: False
 ---
 <!-- This is joint work with [Prof. Balaraman Ravindran](https://www.cse.iitm.ac.in/~ravi/){:target="_blank"}. -->

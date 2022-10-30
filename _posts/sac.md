@@ -1,10 +1,11 @@
 ---
 title: 'Notes on Soft Actor-Critic'
 date: 2021-12-17
-permalink: /posts/2021/12/soft-actor-critic/
+permalink: /blog/sac/
 tags:
   - Model Free RL
   - Maximum Entropy RL
+author_profile : False
 ---
 Soft Actor-Critic (SAC) [[1]](#1) [[2]](#2) is a state-of-the-art model-free deep RL algorithm for continuous action spaces. It adopts an off-policy actor-critic approach and uses stochastic policies. SAC uses the maximum entropy formulation to achieve exploration.
 

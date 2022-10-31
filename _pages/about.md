@@ -13,4 +13,4 @@ I am currently a Research Fellow at the [Robert Bosch Centre for Data Science an
 
 I am interested in developing intelligent systems, that can learn to carry out complex tasks in the physical world. To this end, I am interested in deep learning, reinforcement learning (RL) and robotics. Currently, my work is focused on improving model-based RL for robotics, through better inductive biases based on the underlying physics. 
 
-You can view my detailed CV [here](https://adi3e08.github.io/files/cv.pdf){:target="blank"}.
+You can view my detailed CV [here](https://adi3e08.github.io/files/CV_Adithya_Ramesh.pdf){:target="blank"}.

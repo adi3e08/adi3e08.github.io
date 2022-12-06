@@ -1,24 +1,13 @@
 ---
-title: "Lagrangian Model Based Reinforcement Learning"
-permalink: /research/mbrl-lnn
-venue: 'Deep Reinforcement Learning Workshop, NeurIPS'
-date: 2022-10-27
-excerpt: 'We apply model-based RL to robotic systems undergoing rigid body motion. We utilize the structure of rigid body dynamics to learn a Lagrangian Neural Network and use it to train our model-based RL algorithm. This work was accepted at the Deep Reinforcement Learning Workshop, NeurIPS 2022.'
+title: "Physics-Informed Model-Based Reinforcement Learning"
+permalink: /research/pimbrl
+date: 2022-12-05
+excerpt: 'We use physics-informed neural networks to train a model-based RL algorithm.'
 author_profile: False
 ---
-<!-- This is joint work with [Prof. Balaraman Ravindran](https://www.cse.iitm.ac.in/~ravi/){:target="_blank"}. -->
-We apply reinforcement learning (RL) to robotic systems undergoing rigid body motion. One of the drawbacks of traditional RL algorithms has been their poor 
-sample efficiency. In robotics, collecting large amounts of training data using actual robots is not practical. One approach to improve the sample 
-efficiency of RL algorithms is model-based RL. In our model-based RL algorithm, we learn a model of the environment, essentially its transition dynamics 
-and reward function, use it to generate imaginary trajectories and then backpropagate through them to update the policy, exploiting the differentiability 
-of the model. Intuitively, learning better dynamics models should improve model-based RL performance. Recently there has been growing interest in 
-developing better deep neural network based dynamics models for physical systems, through better inductive biases. We utilize the structure of rigid body 
-dynamics to learn a Lagrangian Neural Network and use it to train our model-based RL algorithm. To the best of our knowledge, we are the first to explore 
-such an approach. While it is intuitive that such physics-informed dynamics models will improve model-based RL performance, it is not apparent in which 
-environments we will significantly benefit from such an approach. We show that, in environments with underactuation and high inherent sensitivity to 
-initial conditions, characterized by a large maximal Lyapunov exponent under freefall, we are likely to significantly benefit from learning 
-physics-informed dynamics models. In such environments, our Lagrangian model-based RL approach achieves better average-return and sample efficiency 
-compared to a version of our model-based RL algorithm that uses a standard deep neural network based dynamics model, as well as Soft Actor-Critic, a 
-state-of-the-art model-free RL algorithm.
+This work is under review. Link to preprint [here](https://arxiv.org/abs/2212.02179){:target="_blank"}.
 
-Link to full paper [here](https://adi3e08.github.io/files/Lagrangian_Model_Based_RL.pdf){:target="_blank"}.
+## Abstract
+We apply reinforcement learning (RL) to robotics. One of the drawbacks of traditional RL algorithms has been their poor sample efficiency. One approach to improve it is model-based RL. We learn a model of the environment, essentially its dynamics and reward function, use it to generate imaginary trajectories and backpropagate through them to update the policy, exploiting the differentiability of the model. Intuitively, learning more accurate models should lead to better performance. Recently, there has been growing interest in developing better deep neural network based dynamics models for physical systems, through better inductive biases. We focus on robotic systems undergoing rigid body motion. We compare two versions of our model-based RL algorithm, one which uses a standard deep neural network based dynamics model and the other which uses a much more accurate, physics-informed neural network based dynamics model. We show that, in environments that are not sensitive to initial conditions, model accuracy matters only to some extent, as numerical errors accumulate slowly. In these environments, both versions achieve similar average-return, while the physics-informed version achieves better sample efficiency. We show that, in environments that are sensitive to initial conditions, model accuracy matters a lot, as numerical errors accumulate fast. In these environments, the physics-informed version achieves significantly better average-return and sample efficiency. We show that, in challenging environments, where we need a lot of samples to learn, physics-informed model-based RL can achieve better asymptotic performance than model-free RL, by generating accurate imaginary data, which allows it to perform many more policy updates. In these environments, our physics-informed model-based RL approach achieves better average-return than Soft Actor-Critic, a SOTA model-free RL algorithm. 
+
+

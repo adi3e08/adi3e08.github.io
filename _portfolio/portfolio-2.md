@@ -30,7 +30,7 @@ Here, the state consists of generalized coordinates $\textbf{q}$, which describe
 
 For systems undergoing rigid body motion, the kinetic energy is $\frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q}) \, \dot{\textbf{q}}$, where $\textbf{M}(\textbf{q})$ is the mass matrix, which is symmetric and positive definite. Hence, the Lagrangian equations of motion become,
 \\[
-\textbf{M}(\textbf{q}) \, \ddot{\textbf{q}} + \underbrace{\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)}\_{\substack{\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} \\ \text{Coriolis Term}}} + \underbrace{\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\textbf{G}(\textbf{q}) \\ \text{Gravitational Term}}} = \boldsymbol\tau
+\textbf{M}(\textbf{q}) \, \ddot{\textbf{q}} + \underbrace{\underbrace{\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)}\_{\substack{\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} \\ \text{Coriolis Term}}}} + \underbrace{\underbrace{\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\textbf{G}(\textbf{q}) \\ \text{Gravitational Term}}}} = \boldsymbol\tau
 \\]
 
 ## Dynamics Learning
@@ -48,7 +48,7 @@ We adopt an actor-critic approach. We train the critic to regress the $\lambda$-
 
 ## Model-Based RL Algorithm
 <p align="center">
-<img src="https://adi3e08.github.io/files/research/pimbrl/algo.png" width="75%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/algo.png" width="100%"/>
 </p>
 
 ## Experiments

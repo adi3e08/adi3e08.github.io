@@ -1,113 +1,75 @@
 ---
-title: 'Notes on Soft Actor-Critic'
-date: 2021-12-17
-permalink: /blog/sac/
-tags:
-  - Model Free RL
-  - Maximum Entropy RL
-author_profile : False
+title: "Physics-Informed Model-Based Reinforcement Learning"
+permalink: /research/pimbrl
+date: 2022-12-05
+excerpt: 'We use physics-informed neural networks to train a model-based RL algorithm.'
+author_profile: False
 ---
-Soft Actor-Critic (SAC) [[1]](#1) [[2]](#2) is a state-of-the-art model-free deep RL algorithm for continuous action spaces. It adopts an off-policy actor-critic approach and uses stochastic policies. SAC uses the maximum entropy formulation to achieve exploration.
+This work is under review. Link to preprint [here](https://arxiv.org/abs/2212.02179){:target="_blank"}.
 
-## Maximum Entropy RL
-In maximum entropy RL, the objective is to maximize the expected return while acting as randomly as possible. By doing so, the agent can explore better and capture different modes of optimality. This also improves robustness against environmental changes.
+# Note : Under construction.
+
+We apply reinforcement learning (RL) to robotics. One of the drawbacks of traditional RL algorithms has been their poor sample efficiency. One approach to improve the sample efficiency is model-based RL. In our model-based RL algorithm, we learn a model of the environment, use it to generate imaginary trajectories and backpropagate through them to update the policy, exploiting the differentiability of the model. The model essentially consists of the transition dynamics and reward function. Intuitively, learning more accurate models should lead to better model-based RL performance. 
+
+We focus on robotic systems undergoing rigid body motion. In this work, we assume that there is no friction or contacts. In future work, we plan to include these effects as well.
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/max_ent_rl_3.gif" width="50%" height="50%"/>
-<br>
-<br>
-A robot navigating a maze. A policy trained using the maximum entropy RL objective will explore both passages during training.
-</p>
-The entropy of a random variable is defined as, $H(X) = \underset{x \sim P}{\mathbb{E}}[-\log P(x)] $.
-
-The maximum entropy RL objective is given by,
-\\[ \pi^{\*} = \underset{\pi}{\arg\max} \underset{\tau \sim \pi}{\mathbb{E}} \bigg[\sum_{t=0}^{\infty}\gamma^{t}\bigg(\;r(s_{t},a_{t},s_{t+1})+\alpha H(\pi(\cdot|s_{t}))\;\bigg)\bigg] \\]
-
-Here $\alpha > 0$ , is the weightage given to the entropy term in the objective. $\alpha$ is also referred to as "temperature".
-
-We define the value function to include the entropy bonuses from every timestep,
-\\[ V^\pi(s) = \underset{\tau \sim \pi}{\mathbb{E}}\bigg[\sum_{t=0}^{\infty}\gamma^{t}\bigg(\;r(s_{t},a_{t},s_{t+1})+\alpha H(\pi(\cdot|s_{t}))\;\bigg)\;\bigg|\;s_{0}=s\,\bigg] \\]
-
-We define the action-value function to include the entropy bonuses from every timestep except the first,
-\\[ Q^\pi(s,a) = \underset{\tau \sim \pi}{\mathbb{E}}\bigg[\sum_{t=0}^{\infty}\gamma^{t} r(s_{t},a_{t},s_{t+1}) + \alpha \sum_{t=1}^{\infty} \gamma^{t} H(\pi(\cdot|s_{t})) \;\bigg|\;s_{0}=s,a_{0}=a\,\bigg] \\]
-
-Thus,
-\\[ V^\pi(s) = \underset{a \sim \pi}{\mathbb{E}}[Q^\pi(s,a)] + \alpha H(\pi(\cdot|s)) \\]
-
-## Soft Actor-Critic (SAC)
-In SAC we have,
-- a single policy network, $ \pi_{\theta} $
-- two Q networks $Q_{w_{1}} \; , \; Q_{w_{2}}$
-- two target Q networks $Q_{w_{1}^{'}} \; , \; Q_{w_{2}^{'}}$
-
-### Learning the Q functions
-Both Q-functions are learned with Mean Squared Bellman Error minimization, by regressing to a single shared target y.
-\\[L(w_{i}) = \underset{(s,a,r,s')\sim \mathcal{D}}{\mathbb{E}}[\;( Q_{w_{i}}(s,a)-y )^{2}\;]\\]
-
-The shared target y is computed using target Q-networks and makes use of the clipped double-Q trick.
-\\[y = r + \gamma \; (\; \underset{i=1,2}{\min} Q_{w_{i}^{'}}(s',a') - \alpha \log \pi_{\theta}(a'|s') \;)\\]
-
-The next-state actions used in the target come from the current policy instead of the target policy.
-
-### Learning the policy
-The objective is to maximize
-\\[ V^\pi(s) = \underset{a \sim \pi}{\mathbb{E}}[Q^\pi(s,a)] + \alpha H(\pi(\cdot|s)) \\]
-
-The policy is stochastic, therefore actions are sampled. To be able to backprop through sampled actions, we use the reparameterization trick, 
-\\[ a = a_{\theta}(s,\epsilon) = \text{tanh}(\mu_{\theta}(s)+\sigma_{\theta}(s)\cdot \epsilon) \\]
-
-The policy outputs mean $\mu$ and standard deviation $\sigma$ of a Gaussian distribution. We then sample a gaussian noise $\epsilon \sim \mathcal{N}(0,\mathbb{I})$. We combine the noise with the policy outputs and use tanh to squash the action to [-1,1].
-
-Thus we can rewrite the expectation over actions into an expectation over noise,
-\\[ \underset{a\sim \pi_{\theta}}{\mathbb{E}}[\; Q^{\pi_{\theta}}(s,a) - \alpha \log \pi_{\theta}(a|s) \;] = \underset{\epsilon \sim\mathcal{N}}{\mathbb{E}}[\; Q^{\pi_{\theta}}(s,a_{\theta}(s,\epsilon)) - \alpha \log \pi_{\theta}(a_{\theta}(s,\epsilon)|s) \;] \\]
-
-Thus the final objective becomes
-\\[ \underset{\theta}{\max} \underset{\epsilon \sim\mathcal{N}}{\underset{s\sim \mathcal{D}}{\mathbb{E}}} [\; (\; \underset{i=1,2}{\min} Q_{w_{i}}(s,a_{\theta}(s,\epsilon)) - \alpha \log \pi_{\theta}(a_{\theta}(s,\epsilon)|s) \;] \\]
-
-### Algorithm
-<p align="center">
-<img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/sac_algo.png" width="100%" height="100%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/reacher.jpg" width="12%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/pendulum.jpg" width="12%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/cartpole.jpg" width="12%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/cart2pole.jpg" width="12%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/acrobot.jpg" width="12%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/cart3pole.jpg" width="12%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/acro3bot.jpg" width="12%"/>
 </p>
 
-### Automatic temperature tuning
-In SAC v1, the temperature $\alpha$ is a hyperparameter. However it was found that the algorithm is brittle to the choice of $\alpha$. 
-
-In SAC v2, the temperature $\alpha$ is learnt by minimizing the loss,
-\\[ L(\alpha) = \alpha \; (-\log\pi(a|s)-\widetilde{H}) \\] 
-where $\widetilde{H}$ is the entropy target. Typically, $\widetilde{H}$ is set to be equal to the negative of the action space dimension i. e. $\widetilde{H} = - \; \text{dim}(\mathcal{A})$.
-
-## Implementation
-You can find my Pytorch implementation of SAC for continuous action spaces [here](https://github.com/adi3e08/SAC){:target="_blank"}. 
-
-### Results
-I trained SAC on a few continuous control tasks from [Deepmind Control Suite](https://github.com/deepmind/dm_control/tree/master/dm_control/suite){:target="_blank"} and [OpenAI Gym](https://www.gymlibrary.ml/){:target="_blank"}. The results are below,
-
-* Cartpole Swingup ([Deepmind Control Suite](https://github.com/deepmind/dm_control/tree/master/dm_control/suite){:target="_blank"}) - Swing up and balance an unactuated pole by applying forces to a cart at its base.
+## Model-Based RL
+We summarize our model-based RL algorithm below. It essentially iterates over three steps : environment interaction, model learning and behaviour learning. 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/sac_cartpole_swingup.png" width="50%" height="50%"/>
-</p>
-<p align="center">
-<img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/sac_cartpole_swingup.gif" width="50%" height="50%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/algo.png" width="75%"/>
 </p>
 
-* Reacher Hard ([Deepmind Control Suite](https://github.com/deepmind/dm_control/tree/master/dm_control/suite){:target="_blank"}) - Control a two-link robotic arm to reach a randomized target location.
+We discuss the model learning and behaviour learning steps in detail below. 
+
+### Model Learning
+Here, we learn the dynamics and reward models. In dynamics learning, we want to predict the next state, given the current state and action.
+We model these systems using Lagrangian mechanics. Hence, the state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$, which are the time derivatives of $\textbf{q}$. The action is the motor torque $\boldsymbol\tau$. So, in dynamics learning, we essentially want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}_{t},\boldsymbol\tau_{t}) \rightarrow (\textbf{q}_{t+1}, \dot{\textbf{q}}_{t+1})$. The most straightforward solution is to train a standard deep neural network. We refer to this approach as DNN. This is shown in the figure below.
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/sac_reacher_hard.png" width="50%" height="50%"/>
-</p>
-<p align="center">
-<img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/sac_reacher_hard.gif" width="50%" height="50%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/dnn.svg" width="15%"/>
 </p>
 
-* [Bipedal Walker](https://www.gymlibrary.ml/environments/box2d/bipedal_walker/){:target="_blank"} (OpenAI Gym) - Train a bipedal robot to walk.
+Another approach is to utilize the structure of the underlying Lagrangian mechanics. This approach builds upon recent work such as Deep Lagrangian Networks [[1]](#1) and Lagrangian Neural Networks [[2]](#2). We detail this approach here. In Lagrangian mechanics, the Lagrangian is a scalar quantity defined as $\mathcal{L}(\textbf{q},\dot{\textbf{q}},t) = \mathcal{T}(\textbf{q}, \dot{\textbf{q}})-\mathcal{V}(\textbf{q})$, where $\mathcal{T}(\textbf{q}, \dot{\textbf{q}})$ is the kinetic energy and $\mathcal{V}(\textbf{q})$ is the potential energy. The Lagrangian equations of motion are given by, $\dfrac{d}{dt}\dfrac{\partial \mathcal{L}}{\partial \dot{\textbf{q}}}-\dfrac{\partial \mathcal{L}}{\partial \textbf{q}} = \boldsymbol\tau$. For systems undergoing rigid body motion, the kinetic energy is $\frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q}) \, \dot{\textbf{q}}$, where $\textbf{M}(\textbf{q})$ is the mass matrix, which is symmetric and positive definite. Hence, the Lagrangian equations of motion become,
+\\[
+\textbf{M}(\textbf{q}) \, \ddot{\textbf{q}} + \underbrace{\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)}_{\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}} + \underbrace{\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}_{\textbf{G}(\textbf{q})} = \boldsymbol\tau
+\\]
+
+Here, $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$ represents the centripetal / Coriolis forces and $\textbf{G}(\textbf{q})$ represents the conservative forces (e. g., gravity). We use one network to learn the potential energy function $\mathcal{V}(\textbf{q})$ and another network to learn a lower triangular matrix $\textbf{L}(\textbf{q})$, using which we compute the mass matrix as $\textbf{M}(\textbf{q}) = \textbf{L}(\textbf{q})\;\textbf{L}^{T}(\textbf{q})$. We then compute $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$ and $\textbf{G}(\textbf{q})$ as shown in Equation \ref{eq-1}. Rearranging Equation \ref{eq-1}, we get the acceleration as $\ddot{\textbf{q}} = \textbf{M}^{-1}(\textbf{q})\,(\boldsymbol\tau - \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} - \textbf{G}(\textbf{q}))$. We then numerically integrate the state derivative $(\dot{\textbf{q}}, \ddot{\textbf{q}})$ over one time step using second-order Runge-Kutta to compute the next state. We refer to this approach as LNN, short for Lagrangian Neural Network. The entire process is shown in the figure below.
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/sac_bipedal_walker.png" width="50%" height="50%"/>
+<img src="https://adi3e08.github.io/files/research/pimbrl/lnn.svg" width="52%"/>
 </p>
-<p align="center">
-<img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/sac_bipedal_walker.gif" width="50%" height="50%"/>
-</p>
+
+In reward learning, we want to learn the reward function. In general, the reward is a function of the current state, action and the next state. In our case, the reward only depends on the next state. Hence, we train a network to map the next state to the reward.
+
+### Behaviour Learning
+Here, we use the learned model to generate imaginary trajectories and backpropagate through them to update the policy. We build upon the Dreamer algorithm [[3]](#3) [[4]](#4). We adopt an actor-critic approach. The critic aims to predict the expected discounted return from a given state. We train the critic to regress the $\lambda$-return. We stabilize the critic training by computing the $\lambda$-return using a target network that is updated every 100 critic updates. The critic loss function is given by $L(w)  = \mathbb{E}\:[\sum_{t=0}^{T-1} \frac{1}{2} ( \: V(s_{t};w) - \text{sg}\,(V'_{\lambda}(s_{t})) \: ) ^{2}]$, where,
+\\[
+V'_{\lambda}(s_{t}) = \begin{cases} \; r_{t} + \gamma \, (\,
+(1-\lambda)V'(s_{t+1};w') + \lambda V'_{\lambda}(s_{t+1}) \,) & \text{if} \; t < T\\
+\; V'(s_{t};w') & \text{if} \; t = T
+\end{cases}
+\\]
+
+We stop the gradients around the target (denoted by the $\text{sg}(.)$ function), as is typical in the literature. We use a stochastic actor. The actor aims to output actions that lead to states that maximize the expected discounted return. We train the actor to maximize the same $\lambda$-return that was computed to train the critic. We add an entropy term to the actor objective to encourage exploration. The overall actor loss function is given by $L(\theta)  = - \; \mathbb{E}\:[\sum_{t=0}^{T-1} [\:V'_{\lambda}(s_{t}) - \eta \log \pi (a_{t}|s_{t};\theta) \:]]$. To backpropagate through sampled actions, we use the reparameterization trick~\citep{kingma2013auto}. The actor network outputs the mean $\mu$ and standard deviation $\sigma$ of a Gaussian distribution, from which we obtain the action as $a_{t} = \text{tanh}(\mu_{\theta}(s_{t})+\sigma_{\theta}(s_{t})\cdot \epsilon)$, where $\epsilon \sim \mathcal{N}(0,\mathbb{I})$.
+
 
 ### References
 <a id="1">[1]</a>
-Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, and Sergey Levine. Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor. In International conference on machine learning, pages 1861–1870. PMLR, 2018a. [Link](https://arxiv.org/abs/1801.01290)
+M. Lutter, C. Ritter, and J. Peters. Deep lagrangian networks: Using physics as model prior for deep learning. In International Conference on Learning Representations (ICLR), 2019a.
 
 <a id="2">[2]</a>
-Tuomas Haarnoja, Aurick Zhou, Kristian Hartikainen, George Tucker, Sehoon Ha, Jie Tan, Vikash Kumar, Henry Zhu, Abhishek Gupta, Pieter Abbeel, et al. Soft actor-critic algorithms and applications. arXiv preprint arXiv:1812.05905, 2018b. [Link](https://arxiv.org/abs/1812.05905)
+Miles Cranmer, Sam Greydanus, Stephan Hoyer, Peter Battaglia, David Spergel, and Shirley Ho. Lagrangian neural networks. In ICLR 2020 Workshop on Integration of Deep Neural Models and Differential Equations, 2020.
+
+<a id="3">[3]</a>
+Danijar Hafner, Timothy Lillicrap, Jimmy Ba, and Mohammad Norouzi. Dream to control: Learning behaviors by latent imagination. arXiv preprint arXiv:1912.01603, 2019.
+
+<a id="4">[4]</a>
+Danijar Hafner, Timothy Lillicrap, Mohammad Norouzi, and Jimmy Ba. Mastering atari with discrete world models. arXiv preprint arXiv:2010.02193, 2020.

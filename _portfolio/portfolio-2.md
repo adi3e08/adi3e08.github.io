@@ -6,7 +6,8 @@ excerpt: 'We use physics-informed neural networks to train a model-based RL algo
 author_profile: False
 ---
 This work is under review. Link to preprint [here](https://arxiv.org/abs/2212.02179){:target="_blank"}.
-## Note : Under construction.
+
+### Note : Under construction.
 
 We apply reinforcement learning (RL) to robotics. One of the drawbacks of traditional RL algorithms has been their poor sample efficiency. One approach to improve the sample efficiency is model-based RL. In our model-based RL algorithm, 
 - We learn a model of the environment (transition dynamics and reward function). 
@@ -14,6 +15,7 @@ We apply reinforcement learning (RL) to robotics. One of the drawbacks of tradit
 - Backpropagate through the imaginary trajectories to update the policy, exploiting the differentiability of the model.
 
 Intuitively, learning more accurate models should lead to better performance. In general, we can learn more accurate dynamics models by utilizing the structure of the underlying physics.
+
 ### Environments
 We focus on robotic systems undergoing rigid body motion. In this work, we assume that there is no friction or contacts. In future work, we plan to include these effects as well. 
 <p align="center">
@@ -23,7 +25,7 @@ We focus on robotic systems undergoing rigid body motion. In this work, we assum
 ### Lagrangian Mechanics
 These systems follow Lagrangian mechanics. The state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$. Let the motor torques be $\boldsymbol\tau$. For systems undergoing rigid body motion, the Lagrangian equations of motion are given by,
 \\[
-\underbrace{\textbf{M}(\textbf{q})}\_{\text{Mass} \\ \text{Matrix}} \ddot{\textbf{q}} + \underbrace{\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)}\_{\substack{\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} \\ \text{Coriolis} \\ \text{Term}}} + \underbrace{\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\textbf{G}(\textbf{q}) \\ \text{Gravitational} \\ \text{Term}}} = \boldsymbol\tau
+\underbrace{\textbf{M}(\textbf{q})}\_{\substack{\text{Mass} \\\ \text{Matrix}}} \ddot{\textbf{q}} + \underbrace{\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)}\_{\substack{\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} \\\ \text{Coriolis} \\\ \text{Term}}} + \underbrace{\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\textbf{G}(\textbf{q}) \\\ \text{Gravitational} \\\ \text{Term}}} = \boldsymbol\tau
 \\]
 
 ### Dynamics Learning

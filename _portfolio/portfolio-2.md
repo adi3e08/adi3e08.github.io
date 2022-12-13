@@ -21,9 +21,9 @@ We focus on robotic systems undergoing rigid body motion. In this work, we assum
 </p>
 
 ### Lagrangian Mechanics
-These systems follow Lagrangian mechanics. Here, the state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$. Let the motor torques be $\boldsymbol\tau$. For systems undergoing rigid body motion, the Lagrangian equations of motion are given by,
+These systems follow Lagrangian mechanics. The state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$. Let the motor torques be $\boldsymbol\tau$. For systems undergoing rigid body motion, the Lagrangian equations of motion are given by,
 \\[
-\underbrace{\textbf{M}(\textbf{q})}\_{\text{Mass}\\ \text{Matrix}} \ddot{\textbf{q}} + \underbrace{\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)}\_{\substack{\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}\\ \text{Coriolis}\\ \text{Term}}} + \underbrace{\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\textbf{G}(\textbf{q})\\ \text{Gravitational}\\ \text{Term}}} = \boldsymbol\tau
+\underbrace{\textbf{M}(\textbf{q})}\_{\text{Mass} \\ \text{Matrix}} \ddot{\textbf{q}} + \underbrace{\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)}\_{\substack{\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} \\ \text{Coriolis} \\ \text{Term}}} + \underbrace{\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\textbf{G}(\textbf{q}) \\ \text{Gravitational} \\ \text{Term}}} = \boldsymbol\tau
 \\]
 
 ### Dynamics Learning

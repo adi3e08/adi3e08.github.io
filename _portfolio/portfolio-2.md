@@ -23,14 +23,14 @@ We focus on robotic systems undergoing rigid body motion. In this work, we assum
 ### Lagrangian Mechanics
 These systems obey Lagrangian mechanics. The state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$. Let the motor torques be $\boldsymbol\tau$. The Lagrangian equations of motion for these systems are given by,
 \\[
-\underbrace{\textbf{M}(\textbf{q})}\_{\substack{\\\ \text{Mass} \\\ \\\ \text{Matrix}}} \ddot{\textbf{q}} + \underbrace{\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)}\_{\substack{\\\ \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} \\\ \\\ \text{Coriolis} \\\ \\\ \text{Term}}} + \underbrace{\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\\\ \textbf{G}(\textbf{q}) \\\ \\\ \text{Gravitational} \\\ \\\ \text{Term}}} = \boldsymbol\tau
+\underbrace{\textbf{M}(\textbf{q})}\_{\substack{\\\ \text{Mass} \\\ \\\ \text{Matrix}}} \, \ddot{\textbf{q}} + \underbrace{\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)}\_{\substack{\\\ \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} \\\ \\\ \text{Coriolis} \\\ \\\ \text{Term}}} + \underbrace{\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\\\ \textbf{G}(\textbf{q}) \\\ \\\ \text{Gravitational} \\\ \\\ \text{Term}}} = \boldsymbol\tau
 \\]
 
 ### Dynamics Learning
 We want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t},\boldsymbol\tau\_{t}) \rightarrow (\textbf{q}\_{t+1}, \dot{\textbf{q}}\_{t+1})$.
 We consider two dynamics models,
 1. A standard deep neural network (DNN) 
-2. A Lagrangian Neural Network (LNN). Here, we utilize the structure of the underlying Lagrangian mechanics to estimate $\ddot{\textbf{q}}$ and then numerically integrate $(\dot{\textbf{q}}, \ddot{\textbf{q}})$ over one time step using second-order Runge-Kutta to compute the next state.
+2. A much more accurate Lagrangian Neural Network (LNN). Here, we utilize the structure of the underlying Lagrangian mechanics to estimate $\ddot{\textbf{q}}$ and then numerically integrate $(\dot{\textbf{q}}, \ddot{\textbf{q}})$ over one time step, using second-order Runge-Kutta, to compute the next state.
 
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/lnn_dnn.svg" width="80%"/>
@@ -40,7 +40,7 @@ We consider two dynamics models,
 We adopt an actor-critic approach. We train the critic to regress the $\lambda$-return computed using a target network. We use a stochastic actor. We train the actor to maximize the same $\lambda$-return, plus an entropy term. To backpropagate through sampled actions, we use the reparameterization trick.
 
 ### Model-Based RL Algorithm
-We summarize our overall model-based RL algorithm below,
+We summarize our overall model-based RL algorithm below.
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/algo.png" width="100%"/>
 </p>

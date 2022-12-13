@@ -55,3 +55,17 @@ We train two versions of our model-based RL algorithm, one which uses the DNN ap
 - We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions. In these environments, the physics-informed version of our algorithm achieves significantly better average-return and sample efficiency. In environments that are not sensitive to initial conditions, both versions of our algorithm achieve similar average-return, while the physics-informed version achieves better sample efficiency. We measure the sensitivity to initial conditions using the finite-time maximal Lyapunov exponent. 
 
 - We also show that, in challenging environments, where we need a lot of samples to learn, physics-informed model-based RL can achieve better average-return than state-of-the-art model-free RL algorithms such as Soft Actor-Critic, by generating accurate imaginary data.
+
+## Videos
+We show the behaviours learnt by our physics-informed model-based RL approach below.
+ <video width="240" height="240" controls>
+  <source src="https://adi3e08.github.io/files/research/pimbrl/reacher.mp4" type="video/mp4">
+  <source src="https://adi3e08.github.io/files/research/pimbrl/pendulum.mp4" type="video/mp4">
+  <source src="https://adi3e08.github.io/files/research/pimbrl/cartpole.mp4" type="video/mp4">
+  <source src="https://adi3e08.github.io/files/research/pimbrl/cart2pole.mp4" type="video/mp4">
+</video> 
+ <video width="240" height="240" controls>
+  <source src="https://adi3e08.github.io/files/research/pimbrl/acrobot.mp4" type="video/mp4">
+  <source src="https://adi3e08.github.io/files/research/pimbrl/cart3pole.mp4" type="video/mp4">
+  <source src="https://adi3e08.github.io/files/research/pimbrl/acro3bot.mp4" type="video/mp4">
+</video> 

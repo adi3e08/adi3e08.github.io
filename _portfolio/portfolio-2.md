@@ -38,7 +38,9 @@ We model these systems using Lagrangian mechanics. Hence, the state consists of 
 </p>
 
 Another approach is to utilize the structure of the underlying Lagrangian mechanics. This approach builds upon recent work such as Deep Lagrangian Networks [[1]](#1) and Lagrangian Neural Networks [[2]](#2). We detail this approach here. In Lagrangian mechanics, the Lagrangian is a scalar quantity defined as $\mathcal{L}(\textbf{q},\dot{\textbf{q}},t) = \mathcal{T}(\textbf{q}, \dot{\textbf{q}})-\mathcal{V}(\textbf{q})$, where $\mathcal{T}(\textbf{q}, \dot{\textbf{q}})$ is the kinetic energy and $\mathcal{V}(\textbf{q})$ is the potential energy. The Lagrangian equations of motion are given by, 
-\\[dfrac{d}{dt}\dfrac{\partial \mathcal{L}}{\partial \dot{\textbf{q}}}-\dfrac{\partial \mathcal{L}}{\partial \textbf{q}} = \boldsymbol\tau\\] 
+\\[
+\dfrac{d}{dt}\dfrac{\partial \mathcal{L}}{\partial \dot{\textbf{q}}}-\dfrac{\partial \mathcal{L}}{\partial \textbf{q}} = \boldsymbol\tau
+\\] 
 
 For systems undergoing rigid body motion, the kinetic energy is $\frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q}) \, \dot{\textbf{q}}$, where $\textbf{M}(\textbf{q})$ is the mass matrix, which is symmetric and positive definite. Hence, the Lagrangian equations of motion become,
 \\[

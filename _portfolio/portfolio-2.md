@@ -14,19 +14,19 @@ We apply reinforcement learning (RL) to robotics. One of the drawbacks of tradit
 
 Intuitively, learning more accurate models should lead to better performance. In general, we can learn more accurate dynamics models by utilizing the structure of the underlying physics.
 
-### Environments
+## Environments
 We focus on robotic systems undergoing rigid body motion. In this work, we assume that there is no friction or contacts. In future work, we plan to include these effects as well. 
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/envs.png" width="100%"/>
 </p>
 
-### Lagrangian Mechanics
+## Lagrangian Mechanics
 These systems obey Lagrangian mechanics. The state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$. Let the motor torques be $\boldsymbol\tau$. The Lagrangian equations of motion for these systems are given by,
 \\[
 \underbrace{\textbf{M}(\textbf{q})}\_{\substack{\\\ \text{Mass} \\\ \\\ \text{Matrix}}} \, \ddot{\textbf{q}} + \underbrace{\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)}\_{\substack{\\\ \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} \\\ \\\ \text{Coriolis} \\\ \\\ \text{Term}}} + \underbrace{\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\\\ \textbf{G}(\textbf{q}) \\\ \\\ \text{Gravitational} \\\ \\\ \text{Term}}} = \boldsymbol\tau
 \\]
 
-### Dynamics Learning
+## Dynamics Learning
 We want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t},\boldsymbol\tau\_{t}) \rightarrow (\textbf{q}\_{t+1}, \dot{\textbf{q}}\_{t+1})$.
 We consider two dynamics models,
 1. A standard deep neural network (DNN) 
@@ -36,19 +36,19 @@ We consider two dynamics models,
 <img src="https://adi3e08.github.io/files/research/pimbrl/lnn_dnn.svg" width="80%"/>
 </p>
 
-### Behaviour Learning
+## Behaviour Learning
 We adopt an actor-critic approach. We train the critic to regress the $\lambda$-return computed using a target network. We use a stochastic actor. We train the actor to maximize the same $\lambda$-return, plus an entropy term. To backpropagate through sampled actions, we use the reparameterization trick.
 
-### Model-Based RL Algorithm
+## Model-Based RL Algorithm
 We summarize our overall model-based RL algorithm below.
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/algo.png" width="100%"/>
 </p>
 
-### Experiments
+## Experiments
 We train two versions of our model-based RL algorithm, one which uses the DNN approach for dynamics learning and the other which uses the LNN approach. In addition, we train Soft Actor-Critic (SAC), a state-of-the-art model-free RL algorithm, to serve as a baseline. We train each method on five random seeds.
 
-### Results
+## Results
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/all_return.png" width="100%"/>
 </p>

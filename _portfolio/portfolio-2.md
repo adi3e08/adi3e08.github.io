@@ -58,14 +58,29 @@ We train two versions of our model-based RL algorithm, one which uses the DNN ap
 
 ## Videos
 We show the behaviours learnt by our physics-informed model-based RL approach below.
- <video width="240" height="240" controls>
+<div align="center"> 
+ <video title="Reacher" style="outline:none; width:22.5%;" controls>
   <source src="https://adi3e08.github.io/files/research/pimbrl/reacher.mp4" type="video/mp4">
+</video> 
+ <video title="Pendulum" style="outline:none; width:22.5%;" controls>
   <source src="https://adi3e08.github.io/files/research/pimbrl/pendulum.mp4" type="video/mp4">
+</video> 
+ <video title="Cartpole" style="outline:none; width:22.5%;" controls>
   <source src="https://adi3e08.github.io/files/research/pimbrl/cartpole.mp4" type="video/mp4">
+</video> 
+ <video title="Cart2pole" style="outline:none; width:22.5%;" controls>
   <source src="https://adi3e08.github.io/files/research/pimbrl/cart2pole.mp4" type="video/mp4">
 </video> 
- <video width="240" height="240" controls>
+</div>
+
+<div align="center"> 
+ <video title="Acrobot" style="outline:none; width:22.5%;" controls>
   <source src="https://adi3e08.github.io/files/research/pimbrl/acrobot.mp4" type="video/mp4">
+</video> 
+ <video title="Cart3pole" style="outline:none; width:22.5%;" controls>
   <source src="https://adi3e08.github.io/files/research/pimbrl/cart3pole.mp4" type="video/mp4">
+</video> 
+ <video title="Acro3bot" style="outline:none; width:22.5%;" controls>
   <source src="https://adi3e08.github.io/files/research/pimbrl/acro3bot.mp4" type="video/mp4">
 </video> 
+</div>

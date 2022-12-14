@@ -2,11 +2,9 @@
 title: "Physics-Informed Model-Based Reinforcement Learning"
 permalink: /research/pimbrl
 date: 2022-12-05
-excerpt: 'We use physics-informed neural networks to train a model-based RL algorithm.'
+excerpt: 'We use physics-informed neural networks to train a model-based RL algorithm. We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions.'
 author_profile: False
 ---
-This work is under review. Link to preprint [here](https://arxiv.org/abs/2212.02179){:target="_blank"}.
-
 We apply reinforcement learning (RL) to robotics. One of the drawbacks of traditional RL algorithms has been their poor sample efficiency. One approach to improve the sample efficiency is model-based RL. Our model-based RL algorithm iterates over three steps,
 - Environment Interaction : Interact with the environment and gather data. 
 - Model Learning : Use the gathered data to learn a model of the environment (transition dynamics and reward function).
@@ -84,3 +82,9 @@ We show the behaviours learnt by our physics-informed model-based RL approach be
   <source src="https://adi3e08.github.io/files/research/pimbrl/acro3bot.mp4" type="video/mp4">
 </video> 
 </div>
+
+## Preprint
+This work is under review. Preprint can be accessed [here](https://arxiv.org/abs/2212.02179){:target="_blank"}.
+
+## Code
+Coming soon.

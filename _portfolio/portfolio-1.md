@@ -25,7 +25,7 @@ The remaining portion of the thesis, presents the original work done. The variat
 
 The remaining portion of the thesis, presents the main problem of interest to this study. We investigate mixed state entanglement of quantized chaotic systems. We study the quantum coupled standard map $AB$ under time evolution for an initial mixed state of the form $\rho_{AB}(0)=\rho_{A}(0) \otimes \rho_{B}(0)$, where $\rho_{A}(0)$ and $\rho_{B}(0)$ are obtained by tracing out the environments $C$ and $D$ from random pure states $\rho_{AC}(0)$ and $\rho_{BD}(0)$ respectively. The study is performed for different interaction strengths between the standard maps and different dimensions of the environment. -->
 
-### References
+## References
 <a id="1">[1]</a>
 Blümel, R., & Reinhardt, W. P. (1997). Chaos in atomic physics (No. 10). Cambridge University Press.
 

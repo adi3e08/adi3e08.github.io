@@ -5,7 +5,7 @@ date: 2022-12-05
 excerpt: 'We use physics-informed neural networks to train a model-based RL algorithm. We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions.'
 author_profile: False
 ---
-We apply reinforcement learning (RL) to robotics. One of the drawbacks of traditional RL algorithms has been their poor sample efficiency. One approach to improve the sample efficiency is model-based RL. Our model-based RL algorithm iterates over three steps,
+We apply reinforcement learning (RL) to robotics. One of the drawbacks of traditional RL algorithms has been their poor sample efficiency. One approach to improve the sample efficiency is model-based RL. Our model-based RL algorithm essentially iterates over three steps,
 - Environment Interaction : Interact with the environment and gather data. 
 - Model Learning : Use the gathered data to learn a model of the environment (transition dynamics and reward function).
 - Behaviour Learning : Use the learned model to generate imaginary trajectories. Backpropagate through the imaginary trajectories to update the policy, exploiting the differentiability of the model.
@@ -25,10 +25,11 @@ These systems obey Lagrangian mechanics. The state consists of generalized coord
 \\]
 
 ## Dynamics Learning
-We want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t},\boldsymbol\tau\_{t}) \rightarrow (\textbf{q}\_{t+1}, \dot{\textbf{q}}\_{t+1})$.
-We consider two dynamics models,
-1. A standard deep neural network (DNN) 
-2. A much more accurate Lagrangian Neural Network (LNN). Here, we utilize the structure of the underlying Lagrangian mechanics to estimate $\ddot{\textbf{q}}$ and then numerically integrate $(\dot{\textbf{q}}, \ddot{\textbf{q}})$ over one time step, using second-order Runge-Kutta, to compute the next state.
+Here, we want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t},\boldsymbol\tau\_{t}) \rightarrow (\textbf{q}\_{t+1}, \dot{\textbf{q}}\_{t+1})$.
+We consider two approaches,
+1. Using a standard deep neural network (DNN) 
+2. Using a Lagrangian Neural Network (LNN). Here, we utilize the structure of the underlying Lagrangian mechanics to estimate $\ddot{\textbf{q}}$. Then, we numerically integrate $(\dot{\textbf{q}}, \ddot{\textbf{q}})$ over one time step using second-order Runge-Kutta to compute the next state.
+LNN is much more accurate.
 
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/lnn_dnn.svg" width="80%"/>

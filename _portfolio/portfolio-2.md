@@ -29,7 +29,8 @@ Here, we want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t
 We consider two approaches,
 1. Using a standard deep neural network (DNN) 
 2. Using a Lagrangian Neural Network (LNN). Here, we utilize the structure of the underlying Lagrangian mechanics to estimate $\ddot{\textbf{q}}$. Then, we numerically integrate $(\dot{\textbf{q}}, \ddot{\textbf{q}})$ over one time step using second-order Runge-Kutta to compute the next state.
-LNN is much more accurate.
+
+LNN is much more accurate than DNN.
 
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/lnn_dnn.svg" width="80%"/>

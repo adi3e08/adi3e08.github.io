@@ -21,10 +21,8 @@ We focus on robotic systems undergoing rigid body motion. In this work, we assum
 ## Lagrangian Mechanics
 These systems follow Lagrangian mechanics. The state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$, which are the time derivatives of $\textbf{q}$. Let the motor torques be $\boldsymbol\tau$. The Lagrangian equations of motion are given by,
 \\[
-\textbf{M}(\textbf{q}) \, \ddot{\textbf{q}} + \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} + \textbf{G}(\textbf{q}) = \boldsymbol\tau
+\underbrace{\textbf{M}(\textbf{q})}\_{\substack{\\\ \text{Mass} \\\ \\\ \text{Matrix}}} \, \ddot{\textbf{q}} + \underbrace{\tfrac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \tfrac{\partial }{\partial \textbf{q}} \big( \tfrac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)}\_{\substack{\\\ \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} \\\ \\\ \text{Coriolis} \\\ \\\ \text{Term}}} + \underbrace{\tfrac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\\\ \textbf{G}(\textbf{q}) \\\ \\\ \text{Gravitational} \\\ \\\ \text{Term}}} = \boldsymbol\tau
 \\]
-
-Here, $\textbf{M}(\textbf{q})$ is the mass matrix, which is symmetric and positive definite. $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$ is the centripetal / Coriolis term and is given by $\frac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \big( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)$. $\textbf{G}(\textbf{q})$ is the gravitational term and is given by $\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}$, where $\mathcal{V}(\textbf{q})$ is the potential energy.
 
 ## Dynamics Learning
 Here, we want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t},\boldsymbol\tau\_{t}) \rightarrow (\textbf{q}\_{t+1}, \dot{\textbf{q}}\_{t+1})$.

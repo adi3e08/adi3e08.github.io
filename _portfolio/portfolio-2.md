@@ -24,7 +24,7 @@ These systems follow Lagrangian mechanics. The state consists of generalized coo
 \textbf{M}(\textbf{q}) \, \ddot{\textbf{q}} + \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} + \textbf{G}(\textbf{q}) = \boldsymbol\tau
 \\]
 
-Here, $\textbf{M}(\textbf{q})$ is the mass matrix. $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$ is the Coriolis term and is given by $\frac{\partial }{\partial \textbf{q}} \bigg(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \bigg( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \bigg)$. $\textbf{G}(\textbf{q})$ is the gravitational term and is given by $\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}$, where $\mathcal{V}(\textbf{q})$ is the potential energy.
+Here, $\textbf{M}(\textbf{q})$ is the mass matrix. $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$ is the Coriolis term and is given by $\frac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \big( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)$. $\textbf{G}(\textbf{q})$ is the gravitational term and is given by $\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}$, where $\mathcal{V}(\textbf{q})$ is the potential energy.
 
 ## Dynamics Learning
 Here, we want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t},\boldsymbol\tau\_{t}) \rightarrow (\textbf{q}\_{t+1}, \dot{\textbf{q}}\_{t+1})$.

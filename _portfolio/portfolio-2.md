@@ -5,12 +5,8 @@ date: 2022-12-05
 excerpt: 'We use physics-informed neural networks to train a model-based RL algorithm. We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions.'
 author_profile: False
 ---
-We apply reinforcement learning (RL) to robotics. One of the drawbacks of traditional RL algorithms has been their poor sample efficiency. One approach to improve the sample efficiency is model-based RL. Our model-based RL algorithm essentially iterates over three steps,
-- Environment Interaction : Interact with the environment and gather data. 
-- Model Learning : Use the gathered data to learn a model of the environment (transition dynamics and reward function).
-- Behaviour Learning : Use the learned model to generate imaginary trajectories. Backpropagate through the imaginary trajectories to update the policy, exploiting the differentiability of the model.
-
-Intuitively, learning more accurate models should lead to better performance. In general, we can learn more accurate dynamics models by utilizing the structure of the underlying physics.
+## Overview
+We apply reinforcement learning (RL) to robotics. One of the drawbacks of traditional RL algorithms has been their poor sample efficiency. One approach to improve the sample efficiency is model-based RL. In our model-based RL algorithm, we learn a model of the environment, essentially its transition dynamics and reward function, use it to generate imaginary trajectories and backpropagate through them to update the policy, exploiting the differentiability of the model. Intuitively, learning more accurate models should lead to better performance. In general, we can learn more accurate dynamics models by utilizing the structure of the underlying physics. We focus on robotic systems undergoing rigid body motion. We compare two versions of our model-based RL algorithm, one which uses a standard deep neural network based dynamics model and the other which uses a much more accurate, physics-informed neural network based dynamics model. We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions.
 
 ## Environments
 We focus on robotic systems undergoing rigid body motion. In this work, we assume that there is no friction or contacts. In future work, we plan to include these effects as well. 
@@ -18,17 +14,24 @@ We focus on robotic systems undergoing rigid body motion. In this work, we assum
 <img src="https://adi3e08.github.io/files/research/pimbrl/envs.png" width="100%"/>
 </p>
 
-## Lagrangian Mechanics
 These systems follow Lagrangian mechanics. The state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$, which are the time derivatives of $\textbf{q}$. Let the motor torques be $\boldsymbol\tau$. The Lagrangian equations of motion are given by,
 \\[
-\underbrace{\textbf{M}(\textbf{q})}\_{\substack{\\\ \text{Mass} \\\ \\\ \text{Matrix}}} \, \ddot{\textbf{q}} + \underbrace{\tfrac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \tfrac{\partial }{\partial \textbf{q}} \big( \tfrac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)}\_{\substack{\\\ \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} \\\ \\\ \text{Coriolis} \\\ \\\ \text{Term}}} + \underbrace{\tfrac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}}\_{\substack{\\\ \textbf{G}(\textbf{q}) \\\ \\\ \text{Gravitational} \\\ \\\ \text{Term}}} = \boldsymbol\tau
+\textbf{M}(\textbf{q}) \, \ddot{\textbf{q}} + \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} + \textbf{G}(\textbf{q}) = \boldsymbol\tau
 \\]
 
-## Dynamics Learning
-Here, we want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t},\boldsymbol\tau\_{t}) \rightarrow (\textbf{q}\_{t+1}, \dot{\textbf{q}}\_{t+1})$.
-We consider two approaches,
-1. Using a standard deep neural network (DNN) 
-2. Using a Lagrangian Neural Network (LNN). Here, we utilize the structure of the underlying Lagrangian mechanics to estimate $\ddot{\textbf{q}}$. Then, we numerically integrate $(\dot{\textbf{q}}, \ddot{\textbf{q}})$ over one time step using second-order Runge-Kutta to compute the next state.
+Here, 
+- $\textbf{M}(\textbf{q})$ is the mass matrix, which is symmetric and positive definite. 
+- $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$ is the centripetal / Coriolis term and is given by $\frac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \big( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)$. 
+- $\textbf{G}(\textbf{q})$ is the gravitational term and is given by $\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}$, where $\mathcal{V}(\textbf{q})$ is the potential energy.
+
+## Model-Based RL Algorithm
+Our model-based RL algorithm essentially iterates over three steps, environment interaction, model learning and behaviour learning. We describe the steps in detail below.
+
+**Environment Interaction** : Here, we interact with the environment and gather data.
+
+**Model Learning** : Here, we use the gathered data to learn a model of the environment, essentially its transition dynamics and reward function. In dynamics learning, we want to predict the next state, given the current state and action, i. e., we want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t},\boldsymbol\tau\_{t}) \rightarrow (\textbf{q}\_{t+1}, \dot{\textbf{q}}\_{t+1})$. We consider two approaches,
+1. Using a standard deep neural network (DNN). 
+2. Using a Lagrangian Neural Network (LNN), which utilizes the structure of the underlying Lagrangian mechanics. Here, we use one network to learn the potential energy function $\mathcal{V}(\textbf{q})$ and another network to learn a lower triangular matrix $\textbf{L}(\textbf{q})$, using which we compute the mass matrix as $\textbf{L}(\textbf{q})\;\textbf{L}^{T}(\textbf{q})$. We then compute $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$, $\textbf{G}(\textbf{q})$ and use them to compute $\ddot{\textbf{q}}$. We then numerically integrate $(\dot{\textbf{q}}, \ddot{\textbf{q}})$ over one time step using second-order Runge-Kutta to compute the next state.
 
 LNN is much more accurate than DNN.
 
@@ -37,9 +40,8 @@ LNN is much more accurate than DNN.
 </p>
 
 ## Behaviour Learning
-We adopt an actor-critic approach. We train the critic to regress the $\lambda$-return computed using a target network. We use a stochastic actor. We train the actor to maximize the same $\lambda$-return, plus an entropy term. To backpropagate through sampled actions, we use the reparameterization trick.
+Here, we use the learned model to generate imaginary trajectories and backpropagate through them to update the actor and critic. We train the critic to regress the $\lambda$-return computed using a target network. The critic loss function is given by $L(w)  = \mathbb{E}\:[\sum_{t=0}^{T-1} \frac{1}{2} ( \: V(s_{t};w) - \text{sg}\,(V'_{\lambda}(s_{t})) \: ) ^{2}]$. We use a stochastic actor. We train the actor to maximize the same $\lambda$-return, plus an entropy term. To backpropagate through sampled actions, we use the reparameterization trick. The actor loss function is given by $L(\theta)  = - \; \mathbb{E}\:[\sum_{t=0}^{T-1} [\:V'_{\lambda}(s_{t}) - \eta \log \pi (a_{t}|s_{t};\theta) \:]]$. 
 
-## Model-Based RL Algorithm
 We summarize our overall model-based RL algorithm below.
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/algo.png" width="100%"/>

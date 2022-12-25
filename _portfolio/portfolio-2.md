@@ -23,9 +23,9 @@ Here,
 
 $\textbf{M}(\textbf{q})$ is the mass matrix, which is symmetric and positive definite. 
 
-$\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$ is the centripetal / Coriolis term and is given by $\frac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \big( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)$.
+$\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} = \frac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \big( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)$, is the centripetal / Coriolis term.
 
-$\textbf{G}(\textbf{q})$ is the gravitational term and is given by $\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}$, where $\mathcal{V}(\textbf{q})$ is the potential energy.
+$\textbf{G}(\textbf{q}) = \frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}$, is the gravitational term, where $\mathcal{V}(\textbf{q})$ is the potential energy.
 
 ## Model-Based RL Algorithm
 Our model-based RL algorithm essentially iterates over three steps, environment interaction, model learning and behaviour learning. We describe the steps in detail below.
@@ -42,8 +42,7 @@ LNN is much more accurate than DNN.
 <img src="https://adi3e08.github.io/files/research/pimbrl/lnn_dnn.svg" width="80%"/>
 </p>
 
-## Behaviour Learning
-Here, we use the learned model to generate imaginary trajectories and backpropagate through them to update the actor and critic. We train the critic to regress the $\lambda$-return computed using a target network. We use a stochastic actor. We train the actor to maximize the same $\lambda$-return, plus an entropy term. To backpropagate through sampled actions, we use the reparameterization trick. 
+**Behaviour Learning** : Here, we use the learned model to generate imaginary trajectories and backpropagate through them to update the actor and critic. We train the critic to regress the $\lambda$-return computed using a target network. We use a stochastic actor. We train the actor to maximize the same $\lambda$-return, plus an entropy term. To backpropagate through sampled actions, we use the reparameterization trick. 
 
 We summarize our overall model-based RL algorithm below.
 <p align="center">

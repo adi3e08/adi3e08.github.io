@@ -20,9 +20,11 @@ These systems follow Lagrangian mechanics. The state consists of generalized coo
 \\]
 
 Here, 
-- $\textbf{M}(\textbf{q})$ is the mass matrix, which is symmetric and positive definite. 
-- $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$ is the centripetal / Coriolis term and is given by $\frac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \big( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)$. 
-- $\textbf{G}(\textbf{q})$ is the gravitational term and is given by $\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}$, where $\mathcal{V}(\textbf{q})$ is the potential energy.
+$\textbf{M}(\textbf{q})$ is the mass matrix, which is symmetric and positive definite. 
+
+$\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$ is the centripetal / Coriolis term and is given by $\frac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \big( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)$.
+
+$\textbf{G}(\textbf{q})$ is the gravitational term and is given by $\frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}$, where $\mathcal{V}(\textbf{q})$ is the potential energy.
 
 ## Model-Based RL Algorithm
 Our model-based RL algorithm essentially iterates over three steps, environment interaction, model learning and behaviour learning. We describe the steps in detail below.
@@ -40,7 +42,7 @@ LNN is much more accurate than DNN.
 </p>
 
 ## Behaviour Learning
-Here, we use the learned model to generate imaginary trajectories and backpropagate through them to update the actor and critic. We train the critic to regress the $\lambda$-return computed using a target network. The critic loss function is given by $L(w)  = \mathbb{E}\:[\sum_{t=0}^{T-1} \frac{1}{2} ( \: V(s_{t};w) - \text{sg}\,(V'_{\lambda}(s_{t})) \: ) ^{2}]$. We use a stochastic actor. We train the actor to maximize the same $\lambda$-return, plus an entropy term. To backpropagate through sampled actions, we use the reparameterization trick. The actor loss function is given by $L(\theta)  = - \; \mathbb{E}\:[\sum_{t=0}^{T-1} [\:V'_{\lambda}(s_{t}) - \eta \log \pi (a_{t}|s_{t};\theta) \:]]$. 
+Here, we use the learned model to generate imaginary trajectories and backpropagate through them to update the actor and critic. We train the critic to regress the $\lambda$-return computed using a target network. We use a stochastic actor. We train the actor to maximize the same $\lambda$-return, plus an entropy term. To backpropagate through sampled actions, we use the reparameterization trick. 
 
 We summarize our overall model-based RL algorithm below.
 <p align="center">

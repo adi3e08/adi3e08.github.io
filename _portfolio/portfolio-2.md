@@ -20,6 +20,7 @@ These systems follow Lagrangian mechanics. The state consists of generalized coo
 \\]
 
 Here, 
+
 $\textbf{M}(\textbf{q})$ is the mass matrix, which is symmetric and positive definite. 
 
 $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$ is the centripetal / Coriolis term and is given by $\frac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \big( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)$.

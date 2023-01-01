@@ -6,15 +6,17 @@ excerpt: 'We use physics-informed neural networks to train a model-based RL algo
 author_profile: False
 ---
 ## Overview
-We apply reinforcement learning (RL) to robotics. One of the drawbacks of traditional RL algorithms has been their poor sample efficiency. One approach to improve the sample efficiency is model-based RL. In our model-based RL algorithm, we learn a model of the environment, essentially its transition dynamics and reward function, use it to generate imaginary trajectories and backpropagate through them to update the policy, exploiting the differentiability of the model. Intuitively, learning more accurate models should lead to better performance. In general, we can learn more accurate dynamics models by utilizing the structure of the underlying physics. We focus on robotic systems undergoing rigid body motion. We compare two versions of our model-based RL algorithm, one which uses a standard deep neural network based dynamics model and the other which uses a much more accurate, physics-informed neural network based dynamics model. We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions.
+One of the drawbacks of traditional reinforcement learning (RL) algorithms has been their poor sample efficiency. One approach to improve the sample efficiency is model-based RL. In our model-based RL algorithm, we learn a model of the environment, essentially its transition dynamics and reward function, use it to generate imaginary trajectories and backpropagate through them to update the policy, exploiting the differentiability of the model. Intuitively, learning more accurate models should lead to better performance. We focus on robotic systems undergoing rigid body motion without contacts. In general, we can learn more accurate dynamics models by utilizing the structure of the underlying physics. We compare two versions of our model-based RL algorithm, one which uses a standard deep neural network based dynamics model and the other which uses a much more accurate, physics-informed neural network based dynamics model. We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions.
 
 ## Environments
-We focus on robotic systems undergoing rigid body motion. In this work, we assume that there is no friction or contacts. In future work, we plan to include these effects as well. 
+We focus on robotic systems undergoing rigid body motion without contacts. The environments considered are shown below. 
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/envs.png" width="100%"/>
 </p>
 
-These systems follow Lagrangian mechanics. The state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$, which are the time derivatives of $\textbf{q}$. Let the motor torques be $\boldsymbol\tau$. The Lagrangian equations of motion are given by,
+We assume that there is no friction. In future work, we plan to include both friction as well as contacts.
+
+These systems obey Lagrangian mechanics. Their state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$, which are the time derivatives of $\textbf{q}$. Let the motor torques be $\boldsymbol\tau$. The Lagrangian equations of motion are given by,
 \\[
 \textbf{M}(\textbf{q}) \, \ddot{\textbf{q}} + \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} + \textbf{G}(\textbf{q}) = \boldsymbol\tau
 \\]

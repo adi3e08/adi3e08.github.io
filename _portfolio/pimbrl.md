@@ -15,20 +15,14 @@ We focus on robotic systems undergoing rigid body motion without contacts. The e
 <img src="https://adi3e08.github.io/files/research/pimbrl/envs.png" width="100%"/>
 </p>
 
-We assume that there is no friction. In future work, we plan to include both friction as well as contacts.
+We also assume that there is no friction. We implement our own simulations from first principles. In future work, we plan to include both friction as well as contacts. 
 
 These systems obey Lagrangian mechanics. Their state consists of generalized coordinates $\textbf{q}$, which describe the configuration of the system, and generalized velocities $\dot{\textbf{q}}$, which are the time derivatives of $\textbf{q}$. Let the motor torques be $\boldsymbol\tau$. The Lagrangian equations of motion are given by,
 \\[
 \textbf{M}(\textbf{q}) \, \ddot{\textbf{q}} + \textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} + \textbf{G}(\textbf{q}) = \boldsymbol\tau
 \\]
 
-Here, 
-
-$\textbf{M}(\textbf{q})$ is the mass matrix, which is symmetric and positive definite. 
-
-$\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} = \frac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \big( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)$, is the centripetal / Coriolis term.
-
-$\textbf{G}(\textbf{q}) = \frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}$, is the gravitational term, where $\mathcal{V}(\textbf{q})$ is the potential energy.
+where, $\textbf{M}(\textbf{q})$ is the mass matrix. $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}} = \frac{\partial }{\partial \textbf{q}} \big(\textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big) \, \dot{\textbf{q}} - \frac{\partial }{\partial \textbf{q}} \big( \frac{1}{2} \, \dot{\textbf{q}}^{T} \, \textbf{M}(\textbf{q})\, \dot{\textbf{q}} \big)$, is the centripetal / Coriolis term and $\textbf{G}(\textbf{q}) = \frac{\partial \mathcal{V}(\textbf{q})}{\partial \textbf{q}}$, is the gravitational term, where $\mathcal{V}(\textbf{q})$ is the potential energy.
 
 ## Model-Based RL Algorithm
 Our model-based RL algorithm essentially iterates over three steps, environment interaction, model learning and behaviour learning. We describe the steps in detail below.

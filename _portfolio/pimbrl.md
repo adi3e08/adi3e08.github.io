@@ -29,12 +29,11 @@ Our model-based RL algorithm essentially iterates over three steps, environment 
 
 **Environment Interaction** : Here, we interact with the environment and gather data.
 
-**Model Learning** : Here, we use the gathered data to learn a model of the environment, essentially its transition dynamics and reward function. In dynamics learning, we want to predict the next state, given the current state and action, i. e., we want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t},\boldsymbol\tau\_{t}) \rightarrow (\textbf{q}\_{t+1}, \dot{\textbf{q}}\_{t+1})$. We consider two approaches,
-1. Using a standard deep neural network (DNN). 
-2. Using a Lagrangian Neural Network (LNN), which utilizes the structure of the underlying Lagrangian mechanics. Here, we use one network to learn the potential energy function $\mathcal{V}(\textbf{q})$ and another network to learn a lower triangular matrix $\textbf{L}(\textbf{q})$, using which we compute the mass matrix as $\textbf{L}(\textbf{q})\;\textbf{L}^{T}(\textbf{q})$. We then compute $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$, $\textbf{G}(\textbf{q})$ and use them to compute $\ddot{\textbf{q}}$. We then numerically integrate $(\dot{\textbf{q}}, \ddot{\textbf{q}})$ over one time step using second-order Runge-Kutta to compute the next state.
+**Model Learning** : Here, we use the gathered data to learn the dynamics and reward models. In dynamics learning, we want to predict the next state, given the current state and action, i. e., we want to learn the transformation $(\textbf{q}_{t}, \dot{\textbf{q}}\_{t},\boldsymbol\tau\_{t}) \rightarrow (\textbf{q}\_{t+1}, \dot{\textbf{q}}\_{t+1})$. We consider two approaches,
+- Using a standard deep neural network (DNN). 
+- Using a Lagrangian Neural Network (LNN), which utilizes the structure of the underlying Lagrangian mechanics. Here, we use one network to learn the potential energy function $\mathcal{V}(\textbf{q})$ and another network to learn a lower triangular matrix $\textbf{L}(\textbf{q})$, using which we compute the mass matrix as $\textbf{L}(\textbf{q})\;\textbf{L}^{T}(\textbf{q})$. We then compute $\textbf{C}(\textbf{q},\dot{\textbf{q}}) \, \dot{\textbf{q}}$, $\textbf{G}(\textbf{q})$ and use them to compute $\ddot{\textbf{q}}$. We then numerically integrate $(\dot{\textbf{q}}, \ddot{\textbf{q}})$ over one time step using second-order Runge-Kutta to compute the next state. LNN is much more accurate than DNN.
 
-LNN is much more accurate than DNN.
-
+In reward learning, we simply train a network to map the next state to the reward.
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/lnn_dnn.svg" width="80%"/>
 </p>

@@ -3,7 +3,7 @@ title: 'Grid World'
 project_type: others
 permalink: /blog/grid-world/
 date: 2017-04-14
-excerpt : 'We find the shortest path between two locations on a grid containing obstacles using RL.'
+excerpt : 'We find the shortest path on a grid using RL.'
 author_profile : False
 ---
 

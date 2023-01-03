@@ -1,8 +1,8 @@
 ---
 layout: archive
-title: "Research"
-permalink: /research/
-author_profile: False
+title: "Projects"
+permalink: /projects/
+author_profile: True
 ---
 
 {% if author.googlescholar %}

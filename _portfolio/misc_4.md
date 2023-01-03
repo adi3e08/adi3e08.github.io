@@ -2,7 +2,8 @@
 title: 'Notes on Soft Actor-Critic'
 project_type: others
 permalink: /blog/sac/
-excerpt : ''
+date: 2021-12-17
+excerpt : 'A short blog post explaining how SAC works. We also present results from training SAC on a few continuous control tasks.'
 author_profile : False
 ---
 Soft Actor-Critic (SAC) [[1]](#1) [[2]](#2) is a state-of-the-art model-free RL algorithm for continuous action spaces. It adopts an off-policy actor-critic approach and uses stochastic policies. It uses the maximum entropy formulation to achieve better exploration.

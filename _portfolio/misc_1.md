@@ -2,7 +2,8 @@
 title: 'Grid World'
 project_type: others
 permalink: /blog/grid-world/
-excerpt : ''
+date: 2017-04-14
+excerpt : 'We solve the shortest path problem using RL.'
 author_profile : False
 ---
 

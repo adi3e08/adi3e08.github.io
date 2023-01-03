@@ -13,21 +13,21 @@ author_profile: False
 
 <h2>Research</h2>
 {% for post in site.portfolio reversed %}
-  {% if post.type == 'research' %}
+  {% if post.project_type == 'research' %}
       {% include archive-single.html %}
   {% endif %}
 {% endfor %}
 
 <h2>Theses</h2>
 {% for post in site.portfolio reversed %}
-  {% if post.type == 'thesis' %}
+  {% if post.project_type == 'thesis' %}
       {% include archive-single.html %}
   {% endif %}
 {% endfor %}
 
 <h2>Other Projects</h2>
 {% for post in site.portfolio reversed %}
-  {% if post.type == 'others' %}
+  {% if post.project_type == 'others' %}
       {% include archive-single.html %}
   {% endif %}
 {% endfor %}

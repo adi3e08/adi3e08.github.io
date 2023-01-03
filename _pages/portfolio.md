@@ -3,7 +3,9 @@ layout: archive
 permalink: /projects/
 author_profile: False
 ---
+
 {% include base_path %}
+
 <h2>Research</h2>
 {% for post in site.portfolio reversed %}
   {% if post.type == 'research' %}

@@ -1,6 +1,6 @@
 ---
 title: 'Notes on DDPG'
-type: others
+project_type: others
 permalink: /blog/ddpg/
 excerpt : ''
 author_profile : False

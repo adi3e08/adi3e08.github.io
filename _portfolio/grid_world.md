@@ -1,6 +1,6 @@
 ---
 title: 'Grid World'
-type: others
+project_type: others
 permalink: /blog/grid-world/
 excerpt : ''
 author_profile : False

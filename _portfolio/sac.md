@@ -1,6 +1,6 @@
 ---
 title: 'Notes on Soft Actor-Critic'
-type: others
+project_type: others
 permalink: /blog/sac/
 excerpt : ''
 author_profile : False

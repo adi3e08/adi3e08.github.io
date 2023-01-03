@@ -1,6 +1,6 @@
 ---
 title: 'Random Walk'
-type: others
+project_type: others
 permalink: /blog/random-walk/
 excerpt : ''
 author_profile : False

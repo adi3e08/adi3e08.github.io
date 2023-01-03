@@ -1,8 +1,7 @@
 ---
 title: "Physics-Informed Model-Based Reinforcement Learning"
-type : research
+project_type : research
 permalink: /research/pimbrl
-authors: Adithya Ramesh, Balaraman Ravindran
 excerpt: 'We use physics-informed neural networks to train a model-based RL algorithm. We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions.'
 author_profile: False
 ---

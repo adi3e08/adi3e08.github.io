@@ -27,11 +27,11 @@ Consider the classic problem of finding the shortest path between two locations 
 
 We consider two variations of value iteration,
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/grid-world/imgs/value_iteration_sync.png" width="90%" height="90%"/>
+<img src="https://adi3e08.github.io/files/blog/grid-world/imgs/value_iteration_sync.png" width="75%" height="75%"/>
 </p>
 
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/grid-world/imgs/value_iteration_async.png" width="90%" height="90%"/>
+<img src="https://adi3e08.github.io/files/blog/grid-world/imgs/value_iteration_async.png" width="75%" height="75%"/>
 </p>
 
 ## Result

@@ -38,7 +38,7 @@ In reward learning, we simply train a network to map the next state to the rewar
 <img src="https://adi3e08.github.io/files/research/pimbrl/lnn_dnn.svg" width="80%"/>
 </p>
 
-**Behaviour Learning** : Here, we use the learned model to generate imaginary trajectories and backpropagate through them to update the actor and critic. We train the critic to regress the $\lambda$-return computed using a target network. We use a stochastic actor. We train the actor to maximize the same $\lambda$-return, plus an entropy term. To backpropagate through sampled actions, we use the reparameterization trick. 
+**Behaviour Learning** : Here, we use the learned model to generate imaginary trajectories and backpropagate through them to update the policy. We adopt an actor-critic approach. The critic aims to predict the expected discounted return from a given state. We train the critic to regress the $\lambda$-return computed using a target network. We use a stochastic actor. The actor aims to maximize the expected discounted return. We train the actor to maximize the same $\lambda$-return, plus an entropy term. To backpropagate through sampled actions, we use the reparameterization trick. 
 
 We summarize our overall model-based RL algorithm below.
 <p align="center">
@@ -52,7 +52,9 @@ We train two versions of our model-based RL algorithm, one which uses the DNN ap
 <p align="center">
 <img src="https://adi3e08.github.io/files/research/pimbrl/all_return.png" width="100%"/>
 </p>
-- We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions. In these environments, the physics-informed version of our algorithm achieves significantly better average-return and sample efficiency. In environments that are not sensitive to initial conditions, both versions of our algorithm achieve similar average-return, while the physics-informed version achieves better sample efficiency. We measure the sensitivity to initial conditions using the finite-time maximal Lyapunov exponent. 
+- We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions. In these environments, the physics-informed version of our algorithm achieves significantly better average-return and sample efficiency. In environments that are not sensitive to initial conditions, both versions of our algorithm achieve similar average-return, while the physics-informed version achieves better sample efficiency. 
+
+- The sensitivity to initial conditions depends on the system dynamics, control policy, degree of actuation and damping. We measure the sensitivity to initial conditions using the finite-time maximal Lyapunov exponent. We compute it using the variational equation, which linearizes the dynamics to estimate how separation vectors evolve with time. 
 
 - We also show that, in challenging environments, where we need a lot of samples to learn, physics-informed model-based RL can achieve better average-return than state-of-the-art model-free RL algorithms such as Soft Actor-Critic, by generating accurate imaginary data.
 

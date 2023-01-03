@@ -54,7 +54,7 @@ We train two versions of our model-based RL algorithm, one which uses the DNN ap
 </p>
 - We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions. In these environments, the physics-informed version of our algorithm achieves significantly better average-return and sample efficiency. In environments that are not sensitive to initial conditions, both versions of our algorithm achieve similar average-return, while the physics-informed version achieves better sample efficiency. 
 
-- The sensitivity to initial conditions depends on the system dynamics, control policy, degree of actuation and damping. We measure the sensitivity to initial conditions using the finite-time maximal Lyapunov exponent. We compute it using the variational equation, which linearizes the dynamics to estimate how separation vectors evolve with time. 
+- We measure the sensitivity to initial conditions by computing the rate of separation of trajectories which start from nearby initial states, i. e., by computing the Lyapunov exponents. More specifically, we compute the finite-time maximal Lyapunov exponent. The sensitivity to initial conditions depends on the system dynamics, control policy, degree of actuation and damping.
 
 - We also show that, in challenging environments, where we need a lot of samples to learn, physics-informed model-based RL can achieve better average-return than state-of-the-art model-free RL algorithms such as Soft Actor-Critic, by generating accurate imaginary data.
 

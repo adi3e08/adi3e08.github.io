@@ -1,12 +1,8 @@
 ---
 title: 'Grid World'
 type: others
-date: 2017-04-14
 permalink: /blog/grid-world/
-tags:
-  - Tabular RL
-  - Value Iteration
-  - Model Based RL
+excerpt : ''
 author_profile : False
 ---
 

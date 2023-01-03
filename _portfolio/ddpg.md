@@ -1,10 +1,8 @@
 ---
 title: 'Notes on DDPG'
 type: others
-date: 2019-06-25
 permalink: /blog/ddpg/
-tags:
-  - DDPG
+excerpt : ''
 author_profile : False
 ---
 Deep Deterministic Policy Gradient (DDPG) [[1]](#1), is a model-free RL algorithm for continuous action spaces. It adopts an off-policy actor-critic

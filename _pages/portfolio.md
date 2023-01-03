@@ -3,17 +3,7 @@ layout: archive
 permalink: /projects/
 author_profile: False
 ---
-
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
-
 {% include base_path %}
-
-<!-- {% for post in site.portfolio reversed %}
-  {% include archive-single.html %}
-{% endfor %} -->
-
 <h2>Research</h2>
 {% for post in site.portfolio reversed %}
   {% if post.type == 'research' %}

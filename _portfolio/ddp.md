@@ -2,6 +2,7 @@
 title: "Mixed State Entanglement In Quantized Chaotic Systems"
 project_type : thesis
 permalink: /research/quantum-chaos
+date: 2016-06-15
 excerpt : 'Masters thesis carried out at IIT Madras.'
 author_profile: False
 ---

@@ -3,11 +3,11 @@ title: 'Grid World'
 project_type: others
 permalink: /blog/grid-world/
 date: 2017-04-14
-excerpt : 'We solve the shortest path problem using RL.'
+excerpt : 'We find the shortest path between two locations on a grid containing obstacles using RL.'
 author_profile : False
 ---
 
-Consider the classic problem of finding the shortest path between two locations on a grid filled with obstacles.
+Consider the classic problem of finding the shortest path between two locations on a grid containing obstacles.
 
 <p align="center">
 <img src="https://adi3e08.github.io/files/blog/grid-world/imgs/grid.png" width="100%" height="100%"/>

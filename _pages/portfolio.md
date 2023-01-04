@@ -1,6 +1,5 @@
 ---
 layout: archive
-title: Projects
 permalink: /projects/
 author_profile: False
 ---
@@ -24,7 +23,7 @@ author_profile: False
   {% endif %}
 {% endfor %}
 
-<h2>Miscellaneous</h2>
+<h2>Other</h2>
 {% for post in site.portfolio reversed %}
   {% if post.project_type == 'others' %}
       {% include archive-single.html %}

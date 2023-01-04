@@ -39,7 +39,7 @@
     {% endif %}
     
     {% if post.collection == 'publications' %}
-        {{ post.authors }} <br> {{ post.venue }}
+        <p> {{ post.authors }} <br> {{ post.venue }} </p>
     {% endif %}
 
     {% if post.excerpt and site.read_more != 'enabled' %}

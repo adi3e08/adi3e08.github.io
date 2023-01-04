@@ -38,9 +38,6 @@
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
     
-    {% if post.project_type == 'research' %}
-        <p> {{ post.authors }} <br> {{ post.venue }} </p>
-    {% endif %}
 
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>

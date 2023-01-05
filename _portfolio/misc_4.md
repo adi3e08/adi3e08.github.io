@@ -62,7 +62,7 @@ Thus the final objective becomes
 
 ## Algorithm
 <p align="center">
-<img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/sac_algo.png" width="100%" height="100%"/>
+<img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/sac_algo.png" width="75%"/>
 </p>
 
 In SAC v1, the temperature $\alpha$ is a hyperparameter. However it was found that the algorithm is brittle to the choice of $\alpha$. 

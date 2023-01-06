@@ -14,25 +14,21 @@ In maximum entropy RL, the objective is to maximize the expected return while ac
 <img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/max_ent_rl_3.gif" width="50%" height="50%"/>
 <br>
 <br>
-A robot navigating a maze. A policy trained using the maximum entropy RL objective will explore both passages during training.
+An agent trained using the maximum entropy RL objective explores both passages during training.
 </p>
-The entropy of a random variable is defined as, $H(X) = \underset{x \sim P}{\mathbb{E}}[-\log P(x)] $.
 
-The maximum entropy RL objective is given by,
-\\[ \pi^{\*} = \underset{\pi}{\arg\max} \underset{\tau \sim \pi}{\mathbb{E}} \bigg[\sum_{t=0}^{\infty}\gamma^{t}\bigg(\;r(s_{t},a_{t},s_{t+1})+\alpha H(\pi(\cdot|s_{t}))\;\bigg)\bigg] \\]
+The entropy of a random variable is defined as, $H(X) = \underset{x \sim P}{\mathbb{E}}[-\log P(x)] $. The maximum entropy RL objective is given by,
+\\[ \pi^{\*} = \underset{\pi}{\arg\max} \underset{\tau \sim \pi}{\mathbb{E}} \big[\sum_{t=0}^{\infty}\gamma^{t}\big(\;r(s_{t},a_{t},s_{t+1})+\alpha H(\pi(\cdot|s_{t}))\;\big)\big] \\]
 
-Here $\alpha > 0$ , is the weightage given to the entropy term in the objective. $\alpha$ is also referred to as "temperature".
-
-We define the value function to include the entropy bonuses from every timestep,
-\\[ V^\pi(s) = \underset{\tau \sim \pi}{\mathbb{E}}\bigg[\sum_{t=0}^{\infty}\gamma^{t}\bigg(\;r(s_{t},a_{t},s_{t+1})+\alpha H(\pi(\cdot|s_{t}))\;\bigg)\;\bigg|\;s_{0}=s\,\bigg] \\]
+Here $\alpha > 0$ , is the weightage given to the entropy term in the objective. $\alpha$ is also referred to as "temperature". We define the value function to include the entropy bonuses from every timestep,
+\\[ V^\pi(s) = \underset{\tau \sim \pi}{\mathbb{E}}\big[\sum_{t=0}^{\infty}\gamma^{t}\big(\;r(s_{t},a_{t},s_{t+1})+\alpha H(\pi(\cdot|s_{t}))\;\big)\;\big|\;s_{0}=s\,\big] \\]
 
 We define the action-value function to include the entropy bonuses from every timestep except the first,
-\\[ Q^\pi(s,a) = \underset{\tau \sim \pi}{\mathbb{E}}\bigg[\sum_{t=0}^{\infty}\gamma^{t} r(s_{t},a_{t},s_{t+1}) + \alpha \sum_{t=1}^{\infty} \gamma^{t} H(\pi(\cdot|s_{t})) \;\bigg|\;s_{0}=s,a_{0}=a\,\bigg] \\]
+\\[ Q^\pi(s,a) = \underset{\tau \sim \pi}{\mathbb{E}}\big[\sum_{t=0}^{\infty}\gamma^{t} r(s_{t},a_{t},s_{t+1}) + \alpha \sum_{t=1}^{\infty} \gamma^{t} H(\pi(\cdot|s_{t})) \;\big|\;s_{0}=s,a_{0}=a\,\big] \\]
 
-Thus,
-\\[ V^\pi(s) = \underset{a \sim \pi}{\mathbb{E}}[Q^\pi(s,a)] + \alpha H(\pi(\cdot|s)) \\]
+Thus, $V^\pi(s) = \underset{a \sim \pi}{\mathbb{E}}[Q^\pi(s,a)] + \alpha H(\pi(\cdot|s))$.
 
-## Soft Actor-Critic (SAC)
+## SAC
 In SAC we have,
 - a single policy network, $ \pi_{\theta} $
 - two Q networks $Q_{w_{1}} \; , \; Q_{w_{2}}$
@@ -52,12 +48,10 @@ In policy learning, the objective is to maximize
 The policy is stochastic, therefore actions are sampled. To be able to backprop through sampled actions, we use the reparameterization trick, 
 \\[ a = a_{\theta}(s,\epsilon) = \text{tanh}(\mu_{\theta}(s)+\sigma_{\theta}(s)\cdot \epsilon) \\]
 
-The policy outputs mean $\mu$ and standard deviation $\sigma$ of a Gaussian distribution. We then sample a gaussian noise $\epsilon \sim \mathcal{N}(0,\mathbb{I})$. We combine the noise with the policy outputs and use tanh to squash the action to [-1,1].
-
-Thus we can rewrite the expectation over actions into an expectation over noise,
+The policy outputs mean $\mu$ and standard deviation $\sigma$ of a Gaussian distribution. We then sample a gaussian noise $\epsilon \sim \mathcal{N}(0,\mathbb{I})$. We combine the noise with the policy outputs and use tanh to squash the action to [-1,1]. Thus, we can rewrite the expectation over actions into an expectation over noise,
 \\[ \underset{a\sim \pi_{\theta}}{\mathbb{E}}[\; Q^{\pi_{\theta}}(s,a) - \alpha \log \pi_{\theta}(a|s) \;] = \underset{\epsilon \sim\mathcal{N}}{\mathbb{E}}[\; Q^{\pi_{\theta}}(s,a_{\theta}(s,\epsilon)) - \alpha \log \pi_{\theta}(a_{\theta}(s,\epsilon)|s) \;] \\]
 
-Thus the final objective becomes
+Thus, the final objective becomes,
 \\[ \underset{\theta}{\max} \underset{\epsilon \sim\mathcal{N}}{\underset{s\sim \mathcal{D}}{\mathbb{E}}} [\; (\; \underset{i=1,2}{\min} Q_{w_{i}}(s,a_{\theta}(s,\epsilon)) - \alpha \log \pi_{\theta}(a_{\theta}(s,\epsilon)|s) \;] \\]
 
 ## Algorithm
@@ -65,10 +59,9 @@ Thus the final objective becomes
 <img src="https://adi3e08.github.io/files/blog/soft-actor-critic/imgs/sac_algo.png" width="85%"/>
 </p>
 
-In SAC v1, the temperature $\alpha$ is a hyperparameter. However it was found that the algorithm is brittle to the choice of $\alpha$. 
-
-In SAC v2, the temperature $\alpha$ is learnt by minimizing the loss,
+In SAC v1, the temperature $\alpha$ is a hyperparameter. However it was found that the algorithm is brittle to the choice of $\alpha$. In SAC v2, the temperature $\alpha$ is learnt by minimizing the loss,
 \\[ L(\alpha) = \alpha \; (-\log\pi(a|s)-\widetilde{H}) \\] 
+
 where $\widetilde{H}$ is the entropy target. Typically, $\widetilde{H}$ is set to be equal to the negative of the action space dimension i. e. $\widetilde{H} = - \; \text{dim}(\mathcal{A})$.
 
 ## Implementation

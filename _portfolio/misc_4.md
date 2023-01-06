@@ -42,7 +42,7 @@ The shared target y is computed using target Q-networks and makes use of the cli
 
 The next-state actions used in the target come from the current policy instead of the target policy.
 
-In policy learning, the objective is to maximize
+In policy learning, the objective is to maximize,
 \\[ V^\pi(s) = \underset{a \sim \pi}{\mathbb{E}}[Q^\pi(s,a)] + \alpha H(\pi(\cdot|s)) \\]
 
 The policy is stochastic, therefore actions are sampled. To be able to backprop through sampled actions, we use the reparameterization trick, 

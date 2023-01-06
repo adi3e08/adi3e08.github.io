@@ -17,7 +17,7 @@ In maximum entropy RL, the objective is to maximize the expected return while ac
 An agent trained using the maximum entropy RL objective explores both passages during training.
 </p>
 
-The entropy of a random variable is defined as, $H(X) = \underset{x \sim P}{\mathbb{E}}[-\log P(x)] $. The maximum entropy RL objective is given by,
+The entropy of a random variable is given by, $H(X) = \underset{x \sim P}{\mathbb{E}}[-\log P(x)] $. Thus, we define the maximum entropy RL objective as,
 \\[ \pi^{\*} = \underset{\pi}{\arg\max} \underset{\tau \sim \pi}{\mathbb{E}} \big[\sum_{t=0}^{\infty}\gamma^{t}\big(\;r(s_{t},a_{t},s_{t+1})+\alpha H(\pi(\cdot|s_{t}))\;\big)\big] \\]
 
 Here $\alpha > 0$ , is the weightage given to the entropy term in the objective. $\alpha$ is also referred to as "temperature". We define the value function to include the entropy bonuses from every timestep,
@@ -26,8 +26,7 @@ Here $\alpha > 0$ , is the weightage given to the entropy term in the objective.
 We define the action-value function to include the entropy bonuses from every timestep except the first,
 \\[ Q^\pi(s,a) = \underset{\tau \sim \pi}{\mathbb{E}}\big[\sum_{t=0}^{\infty}\gamma^{t} r(s_{t},a_{t},s_{t+1}) + \alpha \sum_{t=1}^{\infty} \gamma^{t} H(\pi(\cdot|s_{t})) \;\big|\;s_{0}=s,a_{0}=a\,\big] \\]
 
-Thus,
-\\[ V^\pi(s) = \underset{a \sim \pi}{\mathbb{E}}[Q^\pi(s,a)] + \alpha H(\pi(\cdot|s)) \\]
+Thus, \\( V^\pi(s) = \underset{a \sim \pi}{\mathbb{E}}[Q^\pi(s,a)] + \alpha H(\pi(\cdot|s)) \\).
 
 ## SAC
 In SAC we have,
@@ -41,9 +40,7 @@ Both Q-functions are learned with Mean Squared Bellman Error minimization, by re
 The shared target y is computed using target Q-networks and makes use of the clipped double-Q trick.
 \\[y = r + \gamma \; (\; \underset{i=1,2}{\min} Q_{w_{i}^{'}}(s',a') - \alpha \log \pi_{\theta}(a'|s') \;)\\]
 
-The next-state actions used in the target come from the current policy instead of the target policy.
-
-In policy learning, the objective is to maximize,
+The next-state actions used in the target come from the current policy instead of the target policy. In policy learning, the objective is to maximize,
 \\[ V^\pi(s) = \underset{a \sim \pi}{\mathbb{E}}[Q^\pi(s,a)] + \alpha H(\pi(\cdot|s)) \\]
 
 The policy is stochastic, therefore actions are sampled. To be able to backprop through sampled actions, we use the reparameterization trick, 

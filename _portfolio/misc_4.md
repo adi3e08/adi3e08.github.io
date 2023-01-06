@@ -41,7 +41,9 @@ Both Q-functions are learned with Mean Squared Bellman Error minimization, by re
 The shared target y is computed using target Q-networks and makes use of the clipped double-Q trick.
 \\[y = r + \gamma \; (\; \underset{i=1,2}{\min} Q_{w_{i}^{'}}(s',a') - \alpha \log \pi_{\theta}(a'|s') \;)\\]
 
-The next-state actions used in the target come from the current policy instead of the target policy. In policy learning, the objective is to maximize,
+The next-state actions used in the target come from the current policy instead of the target policy.
+
+In policy learning, the objective is to maximize,
 \\[ V^\pi(s) = \underset{a \sim \pi}{\mathbb{E}}[Q^\pi(s,a)] + \alpha H(\pi(\cdot|s)) \\]
 
 The policy is stochastic, therefore actions are sampled. To be able to backprop through sampled actions, we use the reparameterization trick, 

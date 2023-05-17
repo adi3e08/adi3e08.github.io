@@ -3,7 +3,7 @@ title: "Physics-Informed Model-Based Reinforcement Learning"
 project_type : research
 permalink: /research/pimbrl
 date: 2022-12-05
-excerpt: 'Adithya Ramesh, Balaraman Ravindran.<br>Accepted at Learning for Dynamics & Control Conference (L4DC) 2023. <br><br>We use physics-informed neural networks to train a model-based RL algorithm. We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions.'
+excerpt: 'Adithya Ramesh, Balaraman Ravindran.<br>Accepted at Learning for Dynamics & Control Conference (L4DC) 2023. <br><br>We use a physics-informed neural networks based dynamics model to train a model-based RL algorithm. We show that, in model-based RL, model accuracy mainly matters in environments that are sensitive to initial conditions, where numerical errors accumulate fast. We also show that, in challenging environments, physics-informed model-based RL achieves better average-return than state-of-the-art model-free RL algorithms.'
 author_profile: False
 ---
 Adithya Ramesh, Balaraman Ravindran.<br>

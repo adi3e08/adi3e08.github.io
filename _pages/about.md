@@ -15,4 +15,4 @@ I am interested in developing intelligent robots, that can learn to carry out co
 
 You can view my detailed CV [here](https://adi3e08.github.io/files/CV_Adithya_Ramesh.pdf){:target="blank"}.
 
-Latest news (March '23) : My paper <a href="https://adi3e08.github.io/research/pimbrl" target="_blank"> Physics-Informed Model-Based Reinforcement Learning </a> has been accepted at <a href="https://l4dc.seas.upenn.edu/" target="_blank">Learning for Dynamics & Control Conference (L4DC) 2023</a> !
+Latest news (March '23) : My paper <a href="https://adi3e08.github.io/research/pimbrl" target="_blank"> Physics-Informed Model-Based Reinforcement Learning </a> has been accepted at <a href="https://l4dc.seas.upenn.edu/" target="_blank">Learning for Dynamics & Control Conference (L4DC), 2023</a> !

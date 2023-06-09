@@ -15,4 +15,4 @@ I am interested in developing intelligent robots, that can learn to carry out co
 
 You can view my detailed CV [here](https://adi3e08.github.io/files/CV_Adithya_Ramesh.pdf){:target="blank"}.
 
-Latest news (May '23) : I will be joining MS in Robotics with a CS concentration at [Northeastern University](https://www.northeastern.edu/){:target="blank"} this fall.
+I will be joining [Northeastern University](https://www.northeastern.edu/){:target="blank"} for a MS in Robotics with a CS concentration in fall 2023.

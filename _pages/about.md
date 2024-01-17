@@ -15,3 +15,5 @@ Prior to this, I spent two years as a Research Associate at the [Robert Bosch Ce
 
 You can view my detailed CV [here](https://adi3e08.github.io/files/CV_Adithya_Ramesh.pdf){:target="blank"}.
 
+I enjoy playing sports, particularly soccer and cricket. I also enjoy running and hiking. I love physics. I am a hobby physicist. Don't ask me how it's going though :P.
+

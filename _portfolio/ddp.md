@@ -3,7 +3,7 @@ title: Mixed State Entanglement In Quantized Chaotic Systems
 project_type : thesis
 permalink: /research/quantum-chaos
 date: 2016-06-15
-excerpt : Master's thesis carried out at IIT Madras. We study the connections between chaos and quantum entanglement. We study entanglement in mixed states of quantized chaotic systems, focusing on the quantum coupled standard map.
+excerpt : Master's thesis carried out at IIT Madras. We study the connections between chaos and quantum entanglement. We study entanglement in mixed states of quantized chaotic systems, focusing on the quantum coupled standard map.<br><img src="https://adi3e08.github.io/files/research/ddp/chaos.png" width="75%"/>'
 author_profile: False
 ---
 This work represents my master's thesis carried out at IIT Madras, with [Prof. Arul Lakshminarayan](https://sites.google.com/view/arulakshminarayan){:target="_blank"}. We studied the connections between chaos and quantum entanglement. We studied entanglement in mixed states of quantized chaotic systems, focusing on the quantum coupled standard map. We explored entanglement dynamics with varied interaction strengths and environment dimensions. We identified a critical dimension where entanglement decreases, potentially posing challenges in contexts like quantum computing.

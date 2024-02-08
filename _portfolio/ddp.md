@@ -3,10 +3,12 @@ title: Mixed State Entanglement In Quantized Chaotic Systems
 project_type : thesis
 permalink: /research/quantum-chaos
 date: 2016-06-15
-excerpt : Master's thesis carried out at IIT Madras. We study the connections between chaos and quantum entanglement.
+excerpt : Master's thesis carried out at IIT Madras. We study the connections between chaos and quantum entanglement. Studied entanglement in mixed states of quantized chaotic systems, focusing on the quantum coupled standard map.
 author_profile: False
 ---
-This work represents my master's thesis carried out at IIT Madras, with [Prof. Arul Lakshminarayan](https://sites.google.com/view/arulakshminarayan){:target="_blank"}. You can view my complete thesis [here](https://drive.google.com/file/d/1Shu4J47R_wIqWh6opb5N7-mZth3mWA3c/view){:target="_blank"}.
+This work represents my master's thesis carried out at IIT Madras, with [Prof. Arul Lakshminarayan](https://sites.google.com/view/arulakshminarayan){:target="_blank"}. We study the connections between chaos and quantum entanglement. Studied entanglement in mixed states of quantized chaotic systems, focusing on the quantum coupled standard map. Explored entanglement dynamics with varied interaction strengths and environment dimensions. Identified a critical dimension where entanglement decreases, potentially posing challenges in contexts like quantum computing.
+
+You can view my complete thesis [here](https://drive.google.com/file/d/1Shu4J47R_wIqWh6opb5N7-mZth3mWA3c/view){:target="_blank"}.
 
 ## Summary
 Many physical systems in nature, for example, all atoms and molecules except the hydrogen atom (and related two-body atomic systems) exhibit chaos when treated classically [[1]](#1) [[2]](#2). The same atoms and molecules when treated quantum mechanically, exhibit quantum chaos [[3]](#3). Decoherence, which explains wavefunction collapse as the quantum nature of a system "leaks" into it's environment, is strongly influenced by chaos in the system / environment [[4]](#4). Also, quantum chaos is known to have an important place in the foundation of quantum statistical mechanics [[5]](#5). Thus, the study of quantum chaos becomes important from a general quantum mechanical perspective.  

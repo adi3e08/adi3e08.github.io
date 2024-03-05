@@ -15,3 +15,9 @@ Prior to this, I spent two years as a Research Associate at the [Robert Bosch Ce
 
 I enjoy playing sports, particularly soccer and cricket. I also enjoy running and hiking. I love physics. I pursue physics as a hobby.
 
+<p align="center">
+<br>
+<br>
+"All nature is physics. Rest is mere stamp collection." - Ernest Rutherford.
+</p>
+

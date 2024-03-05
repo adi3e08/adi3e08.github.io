@@ -19,6 +19,7 @@ I enjoy playing sports, particularly soccer and cricket. I also enjoy running an
 <br>
 <br>
 <br>
-"All nature is physics. Rest is mere stamp collection." - Ernest Rutherford.
+<br>
+"<em>All nature is physics. Rest is mere stamp collection.</em>" - Ernest Rutherford.
 </p>
 

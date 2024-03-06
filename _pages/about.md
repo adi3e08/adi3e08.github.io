@@ -20,7 +20,7 @@ I enjoy playing sports, particularly soccer and cricket. I also enjoy running an
 <br>
 <br>
 <br>
-<em>"Education is what remains after one has forgotten what one has learned in school." - Albert Einstein</em>
+<em>"I have deep faith that the principle of the universe will be beautiful and simple." - Albert Einstein</em>
 <br>
 </p>
 

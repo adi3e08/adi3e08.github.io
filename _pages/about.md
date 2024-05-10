@@ -20,7 +20,7 @@ I enjoy playing sports, particularly soccer and cricket. I also enjoy running an
 <br>
 <br>
 <br>
-<em>"I have deep faith that the principle of the universe will be beautiful and simple." - Albert Einstein</em>
+<em>"The society that separates its scholars from its warriors will have its thinking done by cowards and its fighting by fools." - Thucydides</em>
 <br>
 </p>
 

@@ -20,6 +20,6 @@ I enjoy playing sports, particularly soccer and cricket. I also enjoy running an
 <br>
 <br>
 <br>
-<em>"You only live once" - Anonymous</em>
+<em>You only live once.</em>
 <br>
 </p>

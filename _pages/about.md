@@ -20,7 +20,6 @@ I enjoy playing sports, particularly soccer and cricket. I also enjoy running an
 <br>
 <br>
 <br>
-<em>"The society that separates its scholars from its warriors will have its thinking done by cowards and its fighting by fools." - Thucydides</em>
+<em>You only live once</em>
 <br>
 </p>
-

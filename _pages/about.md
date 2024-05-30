@@ -20,6 +20,6 @@ I enjoy playing sports, particularly soccer and cricket. I also enjoy running an
 <br>
 <br>
 <br>
-<em>You only live once.</em>
+<em>Y.O.L.O</em>
 <br>
 </p>

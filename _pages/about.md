@@ -19,7 +19,6 @@ I enjoy playing sports, particularly soccer and cricket. I also enjoy running an
 <br>
 <br>
 <br>
-<br>
-<em>Y.O.L.O</em>
+<em>YOLO</em>
 <br>
 </p>

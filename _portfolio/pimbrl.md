@@ -67,7 +67,7 @@ We train two versions of our model-based RL algorithm, one which uses the DNN ap
 
 - We measure the sensitivity to initial conditions by computing the rate of separation of trajectories which start from nearby initial states, i. e., by computing the Lyapunov exponents. More specifically, we compute the finite-time maximal Lyapunov exponent. The sensitivity to initial conditions depends on factors such as the system dynamics, degree of actuation, control policy and damping.
 
-- We also show that, in challenging environments, physics-informed model-based RL achieves better average-return than state-of-the-art model-free RL algorithms such as Soft Actor-Critic, as it computes the policy-gradient analytically, while the latter estimates it through sampling.
+- We also show that, in challenging environments, physics-informed model-based RL achieves better average-return than state-of-the-art model-free RL algorithms such as Soft Actor-Critic, as it computes the policy-gradient analytically.
 
 ## Videos
 We show the behaviours learnt by our physics-informed model-based RL approach below.
